@@ -237,10 +237,10 @@ const FilterModal = () =>{
                     onChange={handleChange}
                     //getAriaValueText={valuetext}
                     valueLabelDisplay="auto"
-                    step={500000}
+                    step={500}
                     marks
-                    min={10}
-                    max={10000000}
+                    min={100}
+                    max={100000}
                     />
                     <div>From{priceValue.toLocaleString('en', {style : 'currency', currency : 'PKR'})} </div>
                 </div>
