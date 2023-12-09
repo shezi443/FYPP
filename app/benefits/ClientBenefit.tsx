@@ -139,7 +139,7 @@ const ClientBenefit:React.FC<ClientBenefitProps> = ({
                         > 
                             Month {item.month}
                         </td>
-                        <td> {item.count} lượt  </td>
+                        <td> {item.count} turns </td>
                         <td> {item.totalPrice.toLocaleString('vi', {style : 'currency', currency : 'PKR'})} </td>
                         <td >{item.status ? 'completed': 'update'}</td>
                     </tr>
