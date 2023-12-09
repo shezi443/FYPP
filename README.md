@@ -26,9 +26,8 @@
 
 ## Demo
 - Airbnb Demo : 
-[[https://airbnb-again.vercel.app]](https://airbnb-again.vercel.app/)
-- Video Demo on Youtube : 
-[Airbnb demo video](https://www.youtube.com/watch?v=9VzbYxKi_bY&t=2s)
+https://fypp-shezi443.vercel.app/
+
 
 ## ScreenShots
 
@@ -52,7 +51,7 @@
   
 
 ## Author
- - [Linh Thái](https://www.facebook.com/Linh201199)
+ SHEZI
 
 ## Run Locally
 Clone the project
@@ -82,5 +81,5 @@ Start the server
 To run this project, you must link your github repo to [vercel](https://vercel.com/).
 
 ### Feedback
-If you have any feedback, please reach out to us at hoanglinh171038@gmail.com
+If you have any feedback, please reach out to us at shahzadnazir199@gmail.com
 
