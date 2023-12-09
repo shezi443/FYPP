@@ -90,13 +90,13 @@ const CommentItem:React.FC<CommentItemProps> = ({
         if(userId === currentUser?.id){
             axios.post(`/api/deletecomment`,{id})
             .then(()=>{
-                toast.success('Đã xóa')
+                toast.success('Deleted successfully')
             })
             .catch(()=>{
-                toast.error('Xảy ra lỗi, thử lại sau !!!')
+                toast.error('An error occurred, please try again later!!!')
             })
         }else {
-            toast.error("không thể xóa bình luận người khác")
+            toast.error("Cannot delete comments from other users")
         }
     },[currentUser,id,loginModel,userId])
 
@@ -109,7 +109,7 @@ const CommentItem:React.FC<CommentItemProps> = ({
         if(userId === currentUser?.id){
             router.push(`/updateComment/${id}`)
         }else {
-            toast.error('Không thể cập nhật bình luận người khác !!!')
+            toast.error('Cannot update comments from other users!!!')
         }
     },[currentUser,loginModel,userId,id, router])
     return (
@@ -133,7 +133,7 @@ const CommentItem:React.FC<CommentItemProps> = ({
                     <div>
                         <div className='font-bold px-2'>{checkName(userId)}</div>
                         <div className='text-sm font-light px-2'>
-                            {new Date(createdAt).getDate()} thg
+                            {new Date(createdAt).getDate()} -
                             {new Date(createdAt).getMonth() + 1}-
                             {new Date(createdAt).getFullYear()}
                         </div>
@@ -142,9 +142,9 @@ const CommentItem:React.FC<CommentItemProps> = ({
                 <div className='relative'>
                    <MoreVertIcon className='text-neutral-600 hover:text-neutral-400 cursor-pointer' onClick={handleToggleComment}/>
                    <div className={`bg-neutral-100 text-neutral-600 text-sm p-1 transition-all duration-300 ${toggle ? "hidden":"absolute top-6 right-1 w-max"}`}>
-                    <div className='cursor-pointer text-sm hover:text-neutral-600' onClick={handleDeleteComment}>Xóa bình luận</div>
-                    <div className='cursor-pointer text-sm hover:text-neutral-600' onClick={handleUpdateComment}>Cập nhật </div>
-                   </div>
+                   <div className='cursor-pointer text-sm hover:text-neutral-600' onClick={handleDeleteComment}>Delete comment</div>
+                  <div className='cursor-pointer text-sm hover:text-neutral-600' onClick={handleUpdateComment}>Update</div>
+                  </div>
                 </div>
             </div>
             <div className='px-12 py-2 flex'>
@@ -172,12 +172,12 @@ const CommentItem:React.FC<CommentItemProps> = ({
                     <span
                         onClick={handleReadMore}
                         className='underline text-sm font-bold ml-2 cursor-pointer'
-                    >Thu nhỏ</span>
+                    >Collapse</span>
                 ):
                 (<span
                     onClick={handleReadMore}
                     className='underline text-sm font-bold cursor-pointer'
-                >Đọc thêm</span>)
+                >Read more</span>)
                 ):""}
             </div>
         </div>

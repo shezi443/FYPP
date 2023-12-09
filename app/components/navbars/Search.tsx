@@ -66,14 +66,14 @@ const Search:React.FC<SearchProps> = ({
                     </div>
                     <div className='md:grid md:grid-cols-2 justify-center items-center'>
                         <div className=" border-none text-sm font-bold md:border-r-[0px] sm:border-r-[1px]   w-full sm:w-auto">
-                            Địa điểm
+                        Location
                         </div>
                         <div className='flex flex-row gap-2 text-[0.7rem] '>
                             <div className="border-none md:border-r-[1px] w-full" >
-                                Tuần 
+                            Week
                             </div>
                             <div className=" w-full min-w-[80px]">
-                                thêm khách
+                            add guests
                             </div>
                         </div>
                     </div>
@@ -82,9 +82,9 @@ const Search:React.FC<SearchProps> = ({
                     onClick={handleOpenSearch}
                     className='hidden md:flex justify-between items-center cursor-pointer'
                 >
-                    <div className='border-r-[1px] px-4 text-sm font-light'>Bất kì địa điểm nào</div>
-                    <div className='border-r-[1px] px-4 text-sm font-light'>Bất kì tuần nào</div>
-                    <div className='border-r-[1px] px-4 text-sm font-light'>Thêm khách</div>
+                    <div className='border-r-[1px] px-4 text-sm font-light'>Any location</div>
+                    <div className='border-r-[1px] px-4 text-sm font-light'>Any week</div>
+                    <div className='border-r-[1px] px-4 text-sm font-light'>Add guests</div>
                 </div>
                 <div
                     onClick={handleOpenSearch}

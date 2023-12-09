@@ -21,24 +21,24 @@ const InformationPerson:React.FC<InformationPersonProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-3 py-2 md:py-8">
                 <div className="col-span-1 md:col-span-2 flex flex-col gap-4 mb-8 md:mt-8">
                         <div className="flex items-center">
-                            <div className="text-sm font-bold">Tên pháp lý :</div>
-                            <div className="text-sm font-light">{!information ?<span className="text-[0.8rem] text-neutral-600 ml-2">Cập nhật</span>:information?.name}</div>
+                            <div className="text-sm font-bold">Legal name: </div>
+                            <div className="text-sm font-light">{!information ?<span className="text-[0.8rem] text-neutral-600 ml-2">Update</span>:information?.name}</div>
                         </div>
                         <div className="flex items-center">
                             <div className="text-sm font-bold">Email :</div>
-                            <div className="text-sm font-light">{!information ?<span className="text-[0.8rem] text-neutral-600 ml-2">Cập nhật</span>:information?.email}</div>
+                            <div className="text-sm font-light">{!information ?<span className="text-[0.8rem] text-neutral-600 ml-2">Update</span>:information?.email}</div>
                         </div>
                         <div className="flex items-center">
-                            <div className="text-sm font-bold">Số điện thoại :</div>
-                            <div className="text-sm font-light">{!information ?<span className="text-[0.8rem] text-neutral-600 ml-2">Cập nhật</span>:information?.phone}</div>
+                            <div className="text-sm font-bold">Phone number :</div>
+                            <div className="text-sm font-light">{!information ?<span className="text-[0.8rem] text-neutral-600 ml-2">Update</span>:information?.phone}</div>
                         </div>
                         <div className="flex items-center">
-                            <div className="text-sm font-bold">Địa chỉ hiện tại :</div>
-                            <div className="text-sm font-light">{!information ?<span className="text-[0.8rem] text-neutral-600 ml-2">Cập nhật</span>:information?.address}</div>
+                            <div className="text-sm font-bold">Current address :</div>
+                            <div className="text-sm font-light">{!information ?<span className="text-[0.8rem] text-neutral-600 ml-2">Update</span>:information?.address}</div>
                         </div>
                         <div className="flex items-center">
-                            <div className="text-sm font-bold">Liên hệ khuẩn cấp :</div>
-                            <div className="text-sm font-light">{!information ?<span className="text-[0.8rem] text-neutral-600 ml-2">Cập nhật</span>:information?.emerency}</div>
+                            <div className="text-sm font-bold">Emergency contact :</div>
+                            <div className="text-sm font-light">{!information ?<span className="text-[0.8rem] text-neutral-600 ml-2">Update</span>:information?.emerency}</div>
                         </div>
                     </div>
             
@@ -56,8 +56,9 @@ const InformationPerson:React.FC<InformationPersonProps> = ({
                                 <FcLock size={40}/>
                             </div>
                             <div>
-                                <div className="font-bold text-md ">không hiển thị thông tin ở đây</div>
-                                <div className="text-[0.8rem] text-neutral-600 font-light">Chỉ có bạn mới được thấy thông tin bảo mật này</div>
+                            <div className="font-bold text-md">Do not display information here</div>
+                            <div className="text-[0.8rem] text-neutral-600 font-light">Only you can see this security information</div>
+ 
                             </div>
                         </div>
                         <div className="flex flex-col gap-4 border-b-[1px] py-4 ">
@@ -65,16 +66,17 @@ const InformationPerson:React.FC<InformationPersonProps> = ({
                                 <AiFillTool size={40} className="text-neutral-400"/>
                             </div>
                             <div>
-                                <div className="font-bold text-md ">Bạn có thể cập nhật thông tin</div>
+                                <div className="font-bold text-md ">You can update information</div>
                                 <div className="text-[0.8rem] text-neutral-600 font-light">
-                                    Cập nhật lại thông tin miễn phí 
+                                Update information for free
                                     <span 
-                                        onClick={()=>router.push('informations?category=cập%20nhật')}
-                                        className="underline hover:opacity-[0.5] cursor-pointer px-2">tại đây</span> trên Airbnb.
+                                        onClick={()=>router.push('informations?category=update')}
+                                        className="underline hover:opacity-[0.5] cursor-pointer px-2">here</span> on Airbnb.
                                 </div>
                                 <div className="text-[0.8rem] text-neutral-600 font-light">
-                                    Bạn có thể chỉnh sửa thông tin liên hệ và thông tin cá nhân. Nếu sử dụng thông tin này để xác minh danh tính, bạn sẽ cần phải xác minh lần nữa vào lần đặt tiếp theo, hoặc để tiếp tục đón tiếp khách.
-                                </div>
+    You can edit contact and personal information. If you use this information for identity verification, you will need to verify again for the next reservation, or to continue hosting guests.
+</div>
+
                             </div>
                         </div>
                         <div className="flex flex-col gap-4 border-b-[1px] py-4 ">
@@ -82,11 +84,12 @@ const InformationPerson:React.FC<InformationPersonProps> = ({
                                 <GiShare size={40} className="text-rose-400"/>
                             </div>
                             <div>
-                                <div className="font-bold text-md ">Bạn có thể chia sẻ </div>
+                                <div className="font-bold text-md ">You can share </div>
                             
                                 <div className="text-[0.8rem] text-neutral-600 font-light">
-                                Airbnb chỉ tiết lộ thông tin liên lạc cho Chủ nhà/Người tổ chức và khách sau khi đặt phòng/đặt chỗ được xác nhận.
-                                </div>
+    Airbnb only discloses contact information to hosts/organizers and guests after the booking/reservation is confirmed.
+</div>
+
                             </div>
                         </div>
                     </div>

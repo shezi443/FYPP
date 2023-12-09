@@ -40,11 +40,11 @@ const UpdateIdComment:React.FC<UpdateIdCommentProps> = ({
         setLoading(true);
         
         if(commentContent === '') {
-            toast.error('Viết bình luận !!!')
+            toast.error('Write a comment !!!')
         } else {
             axios.post('/api/updateComment',{start:isStar, description:commentContent, id:id})
                 .then(()=>{
-                    toast.success('Cập nhật thành công !!!');
+                    toast.success('Update successful !!!');
                     router.push(`/listings/${commentById?.listingId}`)
                     router.refresh()
                     
@@ -109,8 +109,8 @@ const UpdateIdComment:React.FC<UpdateIdCommentProps> = ({
                      mr-2
                  "
              >
-                <div className="uppercase font-bold text-center mt-4 mb-4">Cập nhật bình luận </div>
-                 <div className="font-light text-sm">Bạn đánh giá chúng tôi bao nhiêu sao ?</div>
+                <div className="uppercase font-bold text-center mt-4 mb-4">Updated comments </div>
+                 <div className="font-light text-sm">How many stars do you rate us?</div>
                     <div className="flex cursor-pointer ">
                         {showStar.map(item =>{
                            return  <div id={`${item.index}`} key={item.index} className={`${item.style}`} onClick={() =>handleFillStar(item.index as number)}><AiFillStar/></div>
@@ -118,7 +118,7 @@ const UpdateIdComment:React.FC<UpdateIdCommentProps> = ({
                     </div>
                  <div>
                  <Header
-                    title="Bạn nghĩ gì về chúng tôi"
+                    title=" What do you think about us?"
                     subtitle=""
                 />
                 <textarea 
@@ -143,8 +143,8 @@ const UpdateIdComment:React.FC<UpdateIdCommentProps> = ({
                  </div>
                  {/* button */}
                  <div className="flex justify-between items-center mt-4 mb-4">
-                        <div className={`text-sm bg-none border-1 hover:text-neutral-500 text-neutral-600 rounded-md p-2  ${loading ?"cursor-not-allowed":"cursor-pointer"}`}  onClick={()=>router.push(`/listings/${commentById?.listingId}`)}>Trở lại</div>
-                        <div className={`text-sm bg-rose-600 hover:bg-rose-500 text-center text-white rounded-md p-2  ${loading ?"cursor-not-allowed":"cursor-pointer"}`} onClick={handleUpdateComment}>Cập nhật</div>
+                        <div className={`text-sm bg-none border-1 hover:text-neutral-500 text-neutral-600 rounded-md p-2  ${loading ?"cursor-not-allowed":"cursor-pointer"}`}  onClick={()=>router.push(`/listings/${commentById?.listingId}`)}>Return</div>
+                        <div className={`text-sm bg-rose-600 hover:bg-rose-500 text-center text-white rounded-md p-2  ${loading ?"cursor-not-allowed":"cursor-pointer"}`} onClick={handleUpdateComment}>Update</div>
                  </div>
              </div>
         </div>

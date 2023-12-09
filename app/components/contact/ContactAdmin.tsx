@@ -7,28 +7,28 @@ import { caroselArr } from './ContactMenuMain';
 
 const article = [
     {
-        title:"Yêu cầu hoàn tiền",
-        content:"Việc hoàn tiền nên được thực hiện dễ dàng. Bạn có thể yêu cầu hoàn tiền trong Trung tâm..."
+        title: "Refund Request",
+        content: "The refund process should be straightforward. You can request a refund through the Center..."
     },
     {
-        title:"Các loại thuế cho khách",
-        content:"Có thể bạn chỉ muốn được an tâm hơn trước khi đặt phòng, cũng có thể lúc này bạn đang..."
+        title: "Tax Types for Guests",
+        content: "You might want peace of mind before booking, or perhaps you're currently..."
     },
     {
-        title:"Qui trình hủy",
-        content:"Đôi khi mọi thứ phát sinh và bạn phải hủy bỏ. Để mọi thứ diễn ra suôn sẻ, đây là cách bạn có thể hủy đặt chỗ, hãy tìm hiểu.."
+        title: "Cancellation Procedure",
+        content: "Sometimes things come up, and you need to cancel. To ensure a smooth process, here's how you can cancel, find out more..."
     },
     {
-        title:"Hoàn tiền tự động",
-        content:"Các khoản hoàn trả đủ điều kiện sẽ được xử lý ngay sau khi bạn nhấp vào hủy bỏ. Chúng tôi tự động xử lý khoản tiền hoàn lại thông qua phương thức thanh toán bạn đã sử dụng..."
+        title: "Automatic Refund",
+        content: "Eligible refund amounts will be processed immediately after you click cancel. We automatically process the refund through the payment method you used..."
     },
     {
-        title:"Kiểm tra trạng thái đặt phòng/đặt chỗ của bạn với tư cách là khách",
-        content:"Trạng thái đặt trước của bạn giúp bạn cập nhật mọi thứ, chẳng hạn như liệu bạn đã được xác nhận hay cần thực hiện điều gì đó như ..."
+        title: "Check Your Reservation Status as a Guest",
+        content: "Checking the status of your reservation helps you stay updated on everything, such as whether you've been confirmed or need to take action like..."
     },
     {
-        title:"Tìm chính sách hủy cho đặt phòng của bạn",
-        content:"Có thể bạn chỉ muốn được an tâm hơn trước khi đặt phòng, cũng có thể lúc này bạn đang ..."
+        title: "Find the Cancellation Policy for Your Booking",
+        content: "You might want peace of mind before booking, or perhaps you're currently..."
     }
 ]
 
@@ -82,7 +82,7 @@ const ContactAdmin =() =>{
                                             className='text-blue-700 italic underline text-[0.8rem] cursor-pointer'
                                             onClick={()=>router.push(`/contact/${item.id}`)}
                                         >
-                                            Đến bài viết
+                                            Go to article
                                         </div>
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@ const ContactAdmin =() =>{
                 })}
                 </Carousel>
             </div>
-           <div className="font-bold text-2xl py-4">Bài viết hàng đầu </div>
+           <div className="font-bold text-2xl py-4">Top Articles </div>
            <div
             className="
                 grid

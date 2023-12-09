@@ -18,18 +18,18 @@ interface TripsCardProps {
 
 
 const mouth = [
-    "tháng giêng",
-    "tháng hai",
-    "tháng ba",
-    "tháng tư",
-    "tháng năm",
-    "tháng sáu",
-    "tháng bảy",
-    "tháng tám",
-    "tháng chín",
-    "tháng mười",
-    "tháng mười một",
-    "tháng mười hai"
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
 ]
 const TripsCard:React.FC<TripsCardProps> = ({
     currentUser,
@@ -62,7 +62,7 @@ const TripsCard:React.FC<TripsCardProps> = ({
                             <div className="flex flex-col gap-4 mt-2">
         
                                 <div>
-                                    <div className="font-bold text-sm">Nhận phòng:</div>
+                                    <div className="font-bold text-sm">Check-in:</div>
                                     <div className="text-[0.8rem] font-light">
                                         {new Date(reservation?.startDate as string).getDate()} - 
                                          {mouth[new Date(reservation?.startDate as string).getMonth()]} -
@@ -71,7 +71,7 @@ const TripsCard:React.FC<TripsCardProps> = ({
                                 </div>
                 
                                 <div>
-                                    <div className="font-bold text-sm">Trả phòng:</div>
+                                    <div className="font-bold text-sm">Check-out:</div>
                                     <div  className="text-[0.8rem] font-light">
                                         {new Date(reservation?.endDate as string).getDate()} -
                                         {mouth[new Date(reservation?.endDate as string).getMonth()]} -
@@ -82,7 +82,7 @@ const TripsCard:React.FC<TripsCardProps> = ({
                         </div>
                         <div className="mt-2 hidden lg:block">
                             <button className="text-white rounded-full px-6 py-1 bg-orange-500 text-center text-sm">20% off</button>
-                            <div className="px-4 font-light text-sm">{data.price.toLocaleString('vi', {style : 'currency', currency : 'VND'})} / đêm</div>
+                            <div className="px-4 font-light text-sm">{data.price.toLocaleString('en', {style : 'currency', currency : 'PKR'})} / night</div>
                         </div>
                     </div>
                 </div>
@@ -90,14 +90,15 @@ const TripsCard:React.FC<TripsCardProps> = ({
             <hr/>
             <div className="py-2 flex flex-col md:flex-row md:justify-between md:items-center px-2">
                <div>
-                <div className="font-bold text-sm">Có sẵn những tháng trong năm:</div>
+                <div className="font-bold text-sm">Available months of the year:</div>
                     <div className="capitalize font-light text-[0.8rem] cursor-pointer">
                     {new Date(data?.createdAt).getMonth() === new Date(data?.night).getMonth() ?<div>{mouth[new Date(data?.night).getMonth()]}</div>: <div>{mouth[new Date(data?.createdAt).getMonth()]} - {mouth[new Date(data?.night).getMonth()]}</div>}
                     </div>
                </div>
                 <div className="mt-4">
                     <Button 
-                        label="Chi tiết"
+                        label="
+                        Details"
                         onClick={()=>router.push(`/trips/${data?.id}`)}
                     />
                 

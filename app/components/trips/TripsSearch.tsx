@@ -36,8 +36,8 @@ const TripsSearch:React.FC<TripsSearchProps> = ({
   
     return (
         <div  >
-            <div className="text-xl font-bold">Danh sách của bạn</div>
-            <div onClick={()=>handleValue('all')} className="cursor-pointer text-neutral-600">Tất cả chuyến đi </div>
+            <div className="text-xl font-bold">Your list</div>
+            <div onClick={()=>handleValue('all')} className="cursor-pointer text-neutral-600">All Trips </div>
             {fillterReservations.reverse().map((reservation)=>{
                 return <SearchItem
                             key={reservation.id}

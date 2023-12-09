@@ -94,7 +94,8 @@ const SearchModal = () =>{
     const handleSubmit =useCallback(()=>{
         // check enought conditiion to submit
         if(!location){
-            toast.error('Bạn chưa chọn địa điểm');
+            toast.error('You have not selected a location');
+
             return null;
         }
         //create query
@@ -168,9 +169,9 @@ const SearchModal = () =>{
         bodyContent = (
             <div className='flex flex-col gap-2'>
                 <Header
-                    title='Bạn muốn đến nơi đâu'
-                    subtitle='tìm địa điểm yêu thích của bạn'
-                />
+    title='Where do you want to go?'
+    subtitle='Find your favorite location'
+/>
                 <CountrySelect 
                     value={location}
                     onChange={(value)=>setLocation(value)}
@@ -183,8 +184,8 @@ const SearchModal = () =>{
         bodyContent = (
             <div>
                <Header 
-                    title="Khi nào bạn lên đường"
-                    subtitle='Chắc chắn mọi người rảnh nhé !'
+                    title="When will you leave?"
+                    subtitle='Make sure everyone is available!'
                />
               <DateRange
                 rangeColors={['#262626']}
@@ -203,20 +204,23 @@ const SearchModal = () =>{
         bodyContent = (
             <div>
                 <Counter 
-                    title="Khách"
-                    subtitle='Bao nhiêu khách trong chuyến đi'
+                    title="Guests"
+                    subtitle="How many guests on the trip"
+                    
                     value={guestCount}
                     onChange={(value)=>setGuestCount(value)}
                 />
                 <Counter 
-                    title="Phòng"
-                    subtitle='Số lượng phòng bạn mong muốn'
+                    title="Rooms"
+                    subtitle="Number of rooms you desire"
+                    
                     value={roomCount}
                     onChange={(value)=>setRoomCount(value)}
                 />
                 <Counter 
-                    title="Phòng ngủ"
-                    subtitle='Số lượng phòng ngủ bạn mong muốn'
+                    title="Bedrooms"
+                    subtitle="Number of bedrooms you desire"
+                    
                     value={bathroomCount}
                     onChange={(value)=>setBathroomCount(value)}
                 />
@@ -288,7 +292,7 @@ const SearchModal = () =>{
                         />
                                         
                             {/* <UserMenu session={session}/> */}
-                          <div onClick={()=>searchModal.onClose()} className='underline font-light text-sm cursor-pointer hover:text-neutral-500'>Đóng</div> 
+                          <div onClick={()=>searchModal.onClose()} className='underline font-light text-sm cursor-pointer hover:text-neutral-500'>Close</div> 
                         </div>
 
 
@@ -297,10 +301,10 @@ const SearchModal = () =>{
                                 <div className='flex justify-between'>
                                     <div 
                                         onClick={handleDelete}
-                                        className='border-[2px] px-2 py-2  rounded-md text-sm hover:opacity-[.5] cursor-pointer'>Xóa dữ liệu</div>
+                                        className='border-[2px] px-2 py-2  rounded-md text-sm hover:opacity-[.5] cursor-pointer'>Delete data</div>
                                     <div 
                                         onClick={handleSubmit}
-                                        className='bg-rose-500 px-2 py-2 text-white rounded-md text-sm hover:opacity-[.5] flex items-center cursor-pointer'>Tìm kiếm</div>
+                                        className='bg-rose-500 px-2 py-2 text-white rounded-md text-sm hover:opacity-[.5] flex items-center cursor-pointer'>Search</div>
                                 </div>
                                 {/* locatioin */}
                                 <div className='border-[1px] rounded-md px-2 py-2 cursor-pointer '>
@@ -313,8 +317,9 @@ const SearchModal = () =>{
                                           
                                         '
                                         >
-                                            <div className='font-bold text-sm'>Bạn sẽ đi đâu ?</div>
-                                            <div className='font-light text-[0.8rem]'>{location ? location?.label : "Tìm kiếm"}</div>
+                                            <div className='font-bold text-sm'>Where are you going?</div>
+<div className='font-light text-[0.8rem]'>{location ? location?.label : "Search"}</div>
+
                                         </div>
                                     
                                     <div className={`mt-2  ${navlocation?"flex flex-col gap-2":"hidden"}`}>
@@ -335,13 +340,14 @@ const SearchModal = () =>{
                                             items-center
                                         '
                                         >
-                                            <div className='font-bold text-sm'>Thời gian</div>
+                                            <div className='font-bold text-sm'>Time</div>
+
                                             <div className='font-light text-[0.8rem] flex justify-between gap-2'>
-                                                {dateRange.startDate === dateRange.endDate ?"Chọn ngày":
+                                                {dateRange.startDate === dateRange.endDate ?"Select date":
                                                 <div className='flex justify-between gap-2'>
-                                                    {dateRange ?<div>{dateRange.startDate?.getDate()}/{ dateRange.startDate?.getMonth() && dateRange.startDate?.getMonth()+1}/{ dateRange.startDate?.getFullYear()}</div> :"Thêm ngày"}
+                                                    {dateRange ?<div>{dateRange.startDate?.getDate()}/{ dateRange.startDate?.getMonth() && dateRange.startDate?.getMonth()+1}/{ dateRange.startDate?.getFullYear()}</div> :"Add days"}
                                                         <span>-</span>
-                                                    {dateRange ?<div>{dateRange.endDate?.getDate()}/{ dateRange.endDate?.getMonth() && dateRange.endDate?.getMonth()+1}/{ dateRange.endDate?.getFullYear()}</div> :"Thêm ngày"} 
+                                                    {dateRange ?<div>{dateRange.endDate?.getDate()}/{ dateRange.endDate?.getMonth() && dateRange.endDate?.getMonth()+1}/{ dateRange.endDate?.getFullYear()}</div> :"Add days"} 
                                                     </div>}
                                                 
                                                 </div>
@@ -369,27 +375,29 @@ const SearchModal = () =>{
 
                                         '
                                         >
-                                            <div className='font-bold text-sm'>Khách</div>
+                                            <div className='font-bold text-sm'>Guest</div>
                                             <div className='font-light text-[0.8rem]'>
-                                                {guestCount ? guestCount +" khách":"Thêm khách"}    
+                                                {guestCount ? guestCount +" Guest":"Add guest"}    
                                             </div>
                                     </div>
                                     <div className={`mt-2 ${navcount ?"block":"hidden"}`}>
                                         <Counter 
-                                            title="Khách"
-                                            subtitle='Bao nhiêu khách trong chuyến đi'
+                                            title="Guests"
+                                            subtitle="How many guests on the trip"
+                                            
                                             value={guestCount}
                                             onChange={(value)=>setGuestCount(value)}
                                         />
                                         <Counter 
-                                            title="Phòng"
-                                            subtitle='Số lượng phòng bạn mong muốn'
+                                            title="Rooms"
+                                            subtitle="Number of rooms you desire"
+                                            
                                             value={roomCount}
                                             onChange={(value)=>setRoomCount(value)}
                                         />
                                         <Counter 
-                                            title="Phòng ngủ"
-                                            subtitle='Số lượng phòng ngủ bạn mong muốn'
+                                            title="Bathrooms"
+                                            subtitle="Number of bathrooms you desire"
                                             value={bathroomCount}
                                             onChange={(value)=>setBathroomCount(value)}
                                         />
@@ -405,26 +413,29 @@ const SearchModal = () =>{
                                     <div 
                                         onClick={()=>handleClickNav('location')}
                                         className={`text-sm font-light ${step ===STEPS.BOOK ?"border-none":"border-r-[1px]"} cursor-pointer px-2 py-2 ${step === STEPS.LOCATION ?"bg-neutral-200 rounded-full":"bg-none"}`}>
-                                            <div className="font-bold">Địa điểm</div>
-                                            <div className="text-[0.8rem]">{location ? location?.label : "Tìm kiếm điểm đến"}</div>
+                                           <div className="font-bold">Location</div>
+
+                                            <div className="text-[0.8rem]">{location ? location?.label : "Search for destinations"}</div>
                                     </div>
                                     <div 
                                         onClick={()=>handleClickNav('book')}
                                         className={`text-sm font-light ${step ===STEPS.CHECKOUT ?"border-none":"border-r-[1px]"} cursor-pointer px-2 py-2 ${step === STEPS.BOOK ?"bg-neutral-200 rounded-full":"bg-none"}`}>
-                                            <div className="font-bold">Nhận phòng</div>
-                                            <div  className="text-[0.8rem] font-light">{dateRange ?<div>{dateRange.startDate?.getDate()}/ { dateRange.startDate?.getMonth() && dateRange.startDate?.getMonth()+1} /  { dateRange.startDate?.getFullYear()}</div> :"Thêm ngày"}</div>
+                                            <div className="font-bold">Check-in</div>
+
+                                            <div  className="text-[0.8rem] font-light">{dateRange ?<div>{dateRange.startDate?.getDate()}/ { dateRange.startDate?.getMonth() && dateRange.startDate?.getMonth()+1} /  { dateRange.startDate?.getFullYear()}</div> :"Add days"}</div>
                                     </div>
                                     <div 
                                         onClick={()=>handleClickNav('checkout')}
                                         className={`text-sm font-light ${step === STEPS.GUEST ?"border-none":"border-r-[1px]"}  cursor-pointer px-2 py-2 ${step === STEPS.CHECKOUT ?"bg-neutral-200 rounded-full":"bg-none"}`}>
-                                            <div className="font-bold">Trả phòng</div>
-                                            <div  className="text-[0.8rem] font-light">{dateRange ?<div>{dateRange.endDate?.getDate()}/ { dateRange.endDate?.getMonth() && dateRange.endDate?.getMonth()+1} /  { dateRange.endDate?.getFullYear()}</div> :"Thêm ngày"}</div>
+                                            <div className="font-bold">Check-out</div>
+
+                                            <div  className="text-[0.8rem] font-light">{dateRange ?<div>{dateRange.endDate?.getDate()}/ { dateRange.endDate?.getMonth() && dateRange.endDate?.getMonth()+1} /  { dateRange.endDate?.getFullYear()}</div> :"Add days"}</div>
                                     </div>
                                     <div 
                                         onClick={()=>handleClickNav('guest')}
                                         className={`text-sm font-light cursor-pointer px-2 py-2 ${step === STEPS.GUEST ?"bg-neutral-200 rounded-full rounded-r-none":"bg-none"}`}>
-                                            <div className="font-bold cursor-pointer">Khách</div>
-                                            <div  className="text-[0.8rem] font-light">{guestCount ? guestCount +" khách":"Thêm khách"}</div>
+                                            <div className="font-bold cursor-pointer">guests</div>
+                                            <div  className="text-[0.8rem] font-light">{guestCount ? guestCount +" guest":"Add guests"}</div>
                                     </div>
                                 </div>
                                 <div className={` py-2 ${step === STEPS.GUEST ?"bg-neutral-200 rounded-full rounded-l-none":"bg-none"}`}>

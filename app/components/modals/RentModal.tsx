@@ -40,226 +40,225 @@ import { BsDoorOpen, BsHouseDoor } from "react-icons/bs"
 import {MdGroup} from 'react-icons/md'
 import { TiGroup } from "react-icons/ti"
 
- export const utilitiesArr =[
+export const utilitiesArr = [
     {
-        label: 'Wifi',
-        icon: FaWifi,
-        description: 'This property is close to the beach!',
-        selected:false,
-      },
-      {
-        label: 'Tivi',
-        icon: PiTelevisionSimpleFill,
-        description: 'This property is has windmills!',
-        selected:false,
-      },
-      {
-        label: 'Bếp',
-        icon: MdKitchen,
-        description: 'This property is modern!',
-        selected:false,
-      },
-      {
-        label: 'Máy giặt',
-        icon: GiWashingMachine,
-        description: 'This property is in the countryside!',
-        selected:false,
-      },
-      {
-        label: 'Chổ để xe miễn phí',
-        icon: AiFillCar,
-        description: 'This property is close to the beach!',
-        selected:false,
-      },
-      {
-        label: 'Điều hòa',
-        icon: TbAirConditioning,
-        description: 'This property is has windmills!',
-        selected:false,
-      },
-      {
-        label: 'Không gian làm việc',
-        icon: MdTableRestaurant,
-        description: 'This property is has windmills!',
-        selected:false,
-      },
-    {
-        label: 'Bể bơi',
-        icon: TbPool,
-        description: 'This property is close to the beach!',
-        selected:false,
-      },
-      {
-        label: 'Bồ tắm nước nóng',
-        icon: FaBath,
-        description: 'This property is has windmills!',
-        selected:false,
-      },
-      {
-        label: 'Sân',
-        icon: MdYard,
-        description: 'This property is modern!',
-        selected:false,
-      },
-      {
-        label: 'Lò nướng BBQ',
-        icon: GiGasStove,
-        description: 'This property is in the countryside!',
-        selected:false,
-      },
-      {
-        label: 'Khu vực ngoài trời',
-        icon: LiaUmbrellaBeachSolid,
-        description: 'This property is close to the beach!',
-        selected:false,
-      },
-      {
-        label: 'Bếp đốt lửa trại',
-        icon: GiCampingTent,
-        description: 'This property is has windmills!',
-        selected:false,
-      },
-      {
-        label: 'Bàn bi-da',
-        icon: LuCalculator,
-        description: 'This property is has windmills!',
-        selected:false,
-      },
-      {
-        label: 'Lò sưởi ',
-        icon: GiHeatHaze,
-        description: 'This property is close to the beach!',
-        selected:false,
-      },
-      {
-        label: 'Đàn piano',
-        icon: BiSolidPiano,
-        description: 'This property is has windmills!',
-        selected:false,
-      },
-      {
-        label: 'Thiết bị tập thể dục',
-        icon: CgGym,
-        description: 'This property is has windmills!',
-        selected:false,
-      },
-      {
-        label: 'Lối ra hồ',
-        icon: GiPoolDive,
-        description: 'This property is close to the beach!',
-        selected:false,
-      },
-      {
-        label: 'Lối ra biển ',
-        icon: TbBeachOff,
-        description: 'This property is has windmills!',
-        selected:false,
-      },
-      {
-        label: 'Sân trượt tuyết',
-        icon: TbSkateboard,
-        description: 'This property is modern!',
-        selected:false,
-      },
-      {
-        label: 'Vòi tắm hoa sen ngoài trời',
-        icon: FaShower,
-        description: 'This property is in the countryside!',
-        selected:false,
-      },
-      {
-        label: 'Máy báo khói',
-        icon: GiSmokeBomb,
-        description: 'This property is close to the beach!',
-        selected:false,
-      },
-      {
-        label: 'bộ sơ cứu ',
-        icon: ImAidKit,
-        description: 'This property is has windmills!',
-        selected:false,
-      },
-      {
-        label: 'Bình chữa cháy',
-        icon: FaFireExtinguisher,
-        description: 'This property is modern!',
-        selected:false,
-      },
-      {
-        label: 'Máy phát hiện khí CO',
-        icon: TbWashMachine,
-        description: 'This property is in the countryside!',
-        selected:false,
-      },
-]
-export const houseArr = [
-    {
-        label:"Sử dụng toàn bộ căn hộ",
-        icon:BsHouseDoor,
-        description:"Khách được sử dụng riêng toàn bộ chổ ở này."
+      label: 'Wifi',
+      icon: FaWifi,
+      description: 'This property is close to the beach!',
+      selected: false,
     },
     {
-        label:"Phòng riêng và có khu vực chung",
-        icon:BsDoorOpen,
-        description:"Khách sẽ có phòng riêng tron một ngôi nhà và được sử dụng những khu vực chung."
+      label: 'TV',
+      icon: PiTelevisionSimpleFill,
+      description: 'This property has windmills!',
+      selected: false,
     },
     {
-        label:"Ngủ trong phòng hoặc khu vực chung",
-        icon:MdOutlineFamilyRestroom,
-        description:"Khách ngủ trong phòng hoặc một khu vực chung - nơi bạn hoặc những người khác cùng sử dụng."
+      label: 'Kitchen',
+      icon: MdKitchen,
+      description: 'This property is modern!',
+      selected: false,
+    },
+    {
+      label: 'Washing Machine',
+      icon: GiWashingMachine,
+      description: 'This property is in the countryside!',
+      selected: false,
+    },
+    {
+      label: 'Free Parking',
+      icon: AiFillCar,
+      description: 'This property is close to the beach!',
+      selected: false,
+    },
+    {
+      label: 'Air Conditioning',
+      icon: TbAirConditioning,
+      description: 'This property has windmills!',
+      selected: false,
+    },
+    {
+      label: 'Workspace',
+      icon: MdTableRestaurant,
+      description: 'This property has windmills!',
+      selected: false,
+    },
+    {
+      label: 'Swimming Pool',
+      icon: TbPool,
+      description: 'This property is close to the beach!',
+      selected: false,
+    },
+    {
+      label: 'Hot Tub',
+      icon: FaBath,
+      description: 'This property has windmills!',
+      selected: false,
+    },
+    {
+      label: 'Yard',
+      icon: MdYard,
+      description: 'This property is modern!',
+      selected: false,
+    },
+    {
+      label: 'BBQ Grill',
+      icon: GiGasStove,
+      description: 'This property is in the countryside!',
+      selected: false,
+    },
+    {
+      label: 'Outdoor Area',
+      icon: LiaUmbrellaBeachSolid,
+      description: 'This property is close to the beach!',
+      selected: false,
+    },
+    {
+      label: 'Campfire',
+      icon: GiCampingTent,
+      description: 'This property has windmills!',
+      selected: false,
+    },
+    {
+      label: 'Billiards Table',
+      icon: LuCalculator,
+      description: 'This property has windmills!',
+      selected: false,
+    },
+    {
+      label: 'Fireplace',
+      icon: GiHeatHaze,
+      description: 'This property is close to the beach!',
+      selected: false,
+    },
+    {
+      label: 'Piano',
+      icon: BiSolidPiano,
+      description: 'This property has windmills!',
+      selected: false,
+    },
+    {
+      label: 'Exercise Equipment',
+      icon: CgGym,
+      description: 'This property has windmills!',
+      selected: false,
+    },
+    {
+      label: 'Lake Access',
+      icon: GiPoolDive,
+      description: 'This property is close to the beach!',
+      selected: false,
+    },
+    {
+      label: 'Beach Access',
+      icon: TbBeachOff,
+      description: 'This property has windmills!',
+      selected: false,
+    },
+    {
+      label: 'Ski Slope',
+      icon: TbSkateboard,
+      description: 'This property is modern!',
+      selected: false,
+    },
+    {
+      label: 'Outdoor Shower',
+      icon: FaShower,
+      description: 'This property is in the countryside!',
+      selected: false,
+    },
+    {
+      label: 'Smoke Detector',
+      icon: GiSmokeBomb,
+      description: 'This property is close to the beach!',
+      selected: false,
+    },
+    {
+      label: 'First Aid Kit',
+      icon: ImAidKit,
+      description: 'This property has windmills!',
+      selected: false,
+    },
+    {
+      label: 'Fire Extinguisher',
+      icon: FaFireExtinguisher,
+      description: 'This property is modern!',
+      selected: false,
+    },
+    {
+      label: 'CO Detector',
+      icon: TbWashMachine,
+      description: 'This property is in the countryside!',
+      selected: false,
+    },
+  ]
+  export const houseArr = [
+    {
+      label: "Entire Home",
+      icon: BsHouseDoor,
+      description: "Guests can use the entire place exclusively."
+    },
+    {
+      label: "Private Room with Shared Areas",
+      icon: BsDoorOpen,
+      description: "Guests will have a private room in a house and can use shared areas."
+    },
+    {
+      label: "Sleep in a Room or Shared Area",
+      icon: MdOutlineFamilyRestroom,
+      description: "Guests sleep in a room or a shared area - where you or others also use."
     }
-]
-export const whoArr = [
+  ]
+  export const whoArr = [
     {
-        label:"single",
-        icon:PiPersonArmsSpreadFill,
-        description:"một người",
-        selected: false,
+      label: "Single",
+      icon: PiPersonArmsSpreadFill,
+      description: "One person",
+      selected: false,
     },
     {
-        label:"couple",
-        icon:MdGroup,
-        description:"cặp đôi",
-        selected: false,
+      label: "Couple",
+      icon: MdGroup,
+      description: "Couple",
+      selected: false,
     },
     {
-        label:"family",
-        icon:MdFamilyRestroom,
-        description:"gia đình",
-        selected: false,
+      label: "Family",
+      icon: MdFamilyRestroom,
+      description: "Family",
+      selected: false,
     },
     {
-        label:"group",
-        icon:TiGroup,
-        description:"hội bạn",
-        selected: false,
+      label: "Group",
+      icon: TiGroup,
+      description: "Group of friends",
+      selected: false,
     },
-
-]
+  ]
 
 export const typeArr = [
     {
-        label:"Yên Bình",
+        label:"Tranquil",
         icon:GiPeaceDove
     },
     {
-        label:"Độc đáo",
+        label:"Unique",
         icon:GiWatchtower
     },
     {
-        label:"Phù hợp cho gia đình",
+        label:"Family-Friendly",
         icon:TbHorseToy
     },
     {
-        label:"Phong cách",
+        label:"Stylish",
         icon:MdOutlineHouseSiding
     },
     {
-        label:"vị trí trung tâm",
+        label:"Central Location",
         icon:MdPlace
     },
     {
-        label:"Rộng rãi",
+        label:"Spacious",
         icon:TbViewportWide
     }
 ]
@@ -381,7 +380,7 @@ const RentModal = () =>{
 
         if(step === STEPS.START)
         {
-            return "Bắt đầu"
+            return "Start"
         }
 
         return 'Next'
@@ -511,29 +510,32 @@ const RentModal = () =>{
     let bodyContent = (
         <div className="md:grid grid-cols-2 gap-8 ">
            <div className="flex justify-center items-center">
-                <span className=" px-4 mt-4 text-xl md:text-2xl font-semibold text-start md:text-center w-full md:w-2/3">Bắt đầu trên Airbnb thật dễ dàng</span>
+                <span className=" px-4 mt-4 text-xl md:text-2xl font-semibold text-start md:text-center w-full md:w-2/3">Getting started on Airbnb is very easy.</span>
            </div>
            <div className="px-4 py-8 ">
             <div className="mb-4">
                 <RentContent 
-                    title="1 Chia sẻ thông tin về chỗ ở của bạn cho chúng tôi"
-                    content="Chia sẻ một số thông tin cơ bản, như vị trí của nhà/phòng cho thuê và số lượng khách có thể ở tại đó."
+                   
+title="1 Share information about your accommodation with us"
+content="Share some basic information, such as the location of the house/room for rent and the number of guests that can stay there."
                     bold
                     icon={FcHome}
                 />
             </div>
             <div className="mb-4">
                 <RentContent 
-                    title="2 Làm cho nhà/phòng cho thuê trở nên nổi bật"
-                    content="Thêm từ 5 ảnh trở lên cùng với tiêu đề và nội dung mô tả – chúng tôi sẽ giúp bạn thực hiện."
+                    
+title="2 Make your accommodation stand out"
+content="Add 5 or more photos along with a title and description – we'll help you with that."
                     bold
                     icon={FcDam}
                 />
             </div>
             <div className="mb-4">
                 <RentContent 
-                    title="3 Hoàn thiện và đăng mục cho thuê"
-                    content="Lựa chọn xem bạn muốn bắt đầu với việc đón tiếp khách có kinh nghiệm, chọn giá khởi điểm hay đăng mục cho thuê."
+                   
+title="3 Complete and publish your rental listing"
+content="Choose whether you want to start with experienced hosting, set a starting price, or publish your rental listing."
                     bold
                     icon={FcSupport}
                 />
@@ -548,8 +550,8 @@ const RentModal = () =>{
         bodyContent =(
             <div className="flex flex-col gap-8">
                 <Header 
-                    title="Mô tả chính xác nơi ở của bạn"
-                    subtitle="Chọn một nơi mô tả phù hợp nhất"
+                 title="Accurately describe your place"
+                 subtitle="Choose a description that best fits"
                     center 
                 />
                 {/* LIST OF CATEGORY */}
@@ -576,8 +578,8 @@ const RentModal = () =>{
         bodyContent =(
             <div className="flex flex-col gap-3 px-4">
                 <Header 
-                    title="Quốc gia của bạn ở đâu ?"
-                    subtitle="Chọn quốc gia của bạn..."
+                    title="Which country are you in?"
+                    subtitle="Choose your country..."
                     center
                 />
                 <CountrySelect 
@@ -596,35 +598,36 @@ const RentModal = () =>{
         bodyContent=(
             <div className="flex px-4  justify-center">
                 <div className="w-full sm:w-1/2 flex flex-col gap-4">
-                    <Header 
-                        title ="Thông tin cơ bản."
-                        subtitle="Bạn sẽ bổ sung thông tin."
-                        center
-                    />
-                    <Counter
-                        title="Số lượng khách"
-                        subtitle="Số lượng khách bạn có thể phục vụ ?"
-                        value={guestCount}
-                        onChange={(value)=>setCustomValue("guestCount",value)}
-                    />
-                    <Counter
-                        title="Số lượng giường ngủ:"
-                        subtitle="Bao nhiêu giường mỗi phòng ?"
-                        value={bed}
-                        onChange={(value)=>setCustomValue("bed",value)}
-                    />
-                    <Counter
-                        title="Số lượng phòng"
-                        subtitle="Số lượng phòng khách sạn có sẵn ?"
-                        value={roomCount}
-                        onChange={(value)=>setCustomValue("roomCount",value)}
-                    />
-                    <Counter
-                        title="Số lượng phòng tắm"
-                        subtitle="Bao nhiêu phòng tắm có sẵn ?"
-                        value={bathroomCount}
-                        onChange={(value)=>setCustomValue("bathroomCount",value)}
-                    />
+                <Header 
+    title ="Basic Information"
+    subtitle="You will provide additional information."
+    center
+/>
+<Counter
+    title="Number of Guests"
+    subtitle="How many guests can you accommodate?"
+    value={guestCount}
+    onChange={(value)=>setCustomValue("guestCount", value)}
+/>
+<Counter
+    title="Number of Bedrooms"
+    subtitle="How many beds per room?"
+    value={bed}
+    onChange={(value)=>setCustomValue("bed", value)}
+/>
+<Counter
+    title="Number of Rooms"
+    subtitle="How many hotel rooms are available?"
+    value={roomCount}
+    onChange={(value)=>setCustomValue("roomCount", value)}
+/>
+<Counter
+    title="Number of Bathrooms"
+    subtitle="How many bathrooms are available?"
+    value={bathroomCount}
+    onChange={(value)=>setCustomValue("bathroomCount", value)}
+/>
+
                 </div>
             </div>
         )
@@ -635,11 +638,11 @@ const RentModal = () =>{
         bodyContent =(
             <div className="flex justify-center items-center w-full px-4">
                 <div className="w-full lg:w-1/2 flex flex-col gap-4 ">
-                    <Header 
-                        title="Dạng căn hộ sử dụng ?"
-                        subtitle="Chọn môt tả đúng nhất"
-                        center
-                    />
+                <Header 
+    title="Type of Accommodation"
+    subtitle="Choose the most accurate description"
+    center
+/>
                     <div className="flex flex-col gap-4 sm:mt-8 px-4">
                         {houseArr.map((item)=>{
                             return <CategoryInput 
@@ -664,8 +667,8 @@ const RentModal = () =>{
             <div className="flex justify-center items-center w-full px-4">
                 <div className="flex flex-col gap-4 w-full md:w-1/2 ">
                     <Header 
-                        title="đối tượng thuê phòng ?"
-                        subtitle="Chọn đối tượng bạn có thể phục vụ"
+                          title="Target Audience for Renting"
+                          subtitle="Choose the target audience you can accommodate"
                         center
                         />
                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:mt-4 md:mt-8 ">
@@ -691,8 +694,8 @@ const RentModal = () =>{
             <div className="w-full h-full  flex justify-center items-center">
                 <div className=" w-full px-4 sm:w-2/3 flex flex-col lg:flex-row justify-between items-center gap-4 pt-8">
                     <Header 
-                        title="Làm cho chỗ ở của bạn trở nên nổi bật"
-                        subtitle="Ở bước này, bạn sẽ thêm một số tiện nghi được cung cấp tại chỗ ở của bạn, cùng với 5 bức ảnh trở lên. Sau đó, bạn sẽ soạn tiêu đề và nội dung mô tả."
+                        title="Make Your Place Stand Out"
+                        subtitle="In this step, you'll add some amenities provided at your place, along with 5 or more photos. Then, you'll compose a title and description."
                     />
                     <Image 
                         src="/house-modal.webp"
@@ -711,8 +714,8 @@ const RentModal = () =>{
             <div className="flex flex-col gap-4 w-full  justify-center items-center ">
                <div className="w-full px-4 sm:w-1/2 ">
                 <Header 
-                        title="Tiện ích "
-                        subtitle="Chọn tất cả tiện ích bạn đang có sẵn."
+                        title="Amenities"
+                        subtitle="Select all the amenities you have available."
                         center
                     />
                     <div className="  max-h-[60vh] overflow-y-auto">
@@ -741,10 +744,10 @@ const RentModal = () =>{
         bodyContent = (
             <div className="flex flex-row justify-center items-center  ">
                 <div className="w-full flex flex-col gap-4 md:w-1/2 px-4">
-                    <Header 
-                        title="Danh mục ảnh"
-                        subtitle="Danh mục ảnh về khách sạn của bạn."
-                    />
+                <Header 
+    title="Photo Gallery"
+    subtitle="A gallery of photos showcasing your hotel."
+/>
                     <ImageUpload 
                         value={imageSrc}
                         onChange={(value)=>setCustomValue('imageSrc',value)}
@@ -761,8 +764,8 @@ const RentModal = () =>{
             <div className="flex justify-center items-center">
                 <div className="flex flex-col gap-4 w-full sm:w-1/2 px-4">
                     <Header 
-                        title="Bây giờ, hãy đặt tiêu đề cho chỗ ở thuộc danh mục nhà nông trại của bạn"
-                        subtitle="Tiêu đề ngắn cho hiệu quả tốt nhất. Đừng lo lắng, bạn luôn có thể thay đổi tiêu đề sau."
+                        title="Now, give the property a title in your farmhouse category"
+                        subtitle="A short and effective title works best. Don't worry, you can always change the title later."
                     />
                     <Input 
                         id="title"
@@ -793,11 +796,11 @@ const RentModal = () =>{
             <div className="flex justify-center items-center w-full h-full px-4">
                 <div>
                     <div className="mb-8 mt-4">
-                        <Header 
-                            title="Đặc trưng danh mục"
-                            subtitle="Chúng tôi sẽ sử dụng thông tin này để bắt đầu tạo nội dung mô tả của bạn."
-                            center
-                        />
+                    <Header 
+    title="Category Features"
+    subtitle="We will use this information to start creating your listing description."
+    center
+/>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-h-[50vh] overflow-y-auto">
                         {typeArr.map((item)=>{
@@ -821,10 +824,11 @@ const RentModal = () =>{
         bodyContent = (
             <div className="w-full h-full  flex justify-center items-center">
                 <div className=" w-full px-4 sm:w-2/3 flex flex-col lg:flex-row justify-between items-center gap-4 pt-8">
-                    <Header 
-                        title="Hoàn thiện và đăng"
-                        subtitle="Cuối cùng, bạn sẽ chọn bắt đầu với việc đón tiếp khách có kinh nghiệm hoặc không, sau đó bạn sẽ đặt giá theo đêm. Hãy trả lời một vài câu hỏi nhanh và đăng mục cho thuê khi bạn đã sẵn sàng."
-                    />
+                <Header 
+    title="Complete and Publish"
+    subtitle="Finally, you will choose whether to start with experienced guests or not. Then, you will set the nightly price. Answer a few quick questions and publish your listing when you're ready."
+/>
+
                     <Image 
                         src="/house-modal.webp"
                         alt="House Modal"   
@@ -842,18 +846,20 @@ const RentModal = () =>{
             <div className="w-full h-full  flex justify-center items-center">
                 <div className=" w-full px-4 sm:w-2/3 flex flex-col lg:flex-col justify-between items-center gap-4 pt-8">
                 <Header 
-                    title="Bạn có sẵn phòng trong khoảng thời gian nào ?"
-                    subtitle="Chọn ngày bạn có thể cho thuê phòng, có thể cập nhật trong thời gian tới."
-                    center
-                />
+    title="When Are Your Rooms Available?"
+    subtitle="Select the dates you can rent your rooms. You can update this in the future."
+    center
+/>
+
                    <div>
                     <div className="flex text-sm ">
-                        <div className="font-bold">Ngày bắt đầu :</div>
+                    <div className="font-bold">Start Date:</div>
                         <div  className="font-light">{new Date().getDate()} thg</div>
                         <div className="font-light">{new Date().getMonth()+1}-</div>
                         <div className="font-light">{new Date().getFullYear()}</div>
                     </div>
-                    <div className="font-bold text-sm">Ngày kết thúc : <span className="font-light text-[0.7rem]">Chọn ngày kết thúc cho thuê</span></div>
+                    <div className="font-bold text-sm">End Date: <span className="font-light text-[0.7rem]">Select the end date for the rental</span></div>
+
                     <Input 
                         id="night"
                         label="Night"
@@ -872,11 +878,12 @@ const RentModal = () =>{
         bodyContent =(
             <div className="flex justify-center items-centerpt-12 px-4 w-full h-full">
                <div className="flex flex-col gap-4 w-full sm:w-1/2 h-full">
-                <Header 
-                        title="Bây giờ, hãy đặt mức giá mà bạn muốn và bắt đầu cho thuê"
-                        subtitle="Bạn có thể thay đổi giá này bất cứ lúc nào."
-                        center
-                    />
+               <Header 
+    title="Now, set the price you want and start renting"
+    subtitle="You can change this price at any time."
+    center
+/>
+
                    <div className="w-full h-full">
                     <Input 
                             id="price"
@@ -910,7 +917,7 @@ const RentModal = () =>{
     // handle check fill all
     const handleCheckAllFill = useMemo(()=>{
         if(step === STEPS.PRICE){
-            if(location === null || who.length === 0 || imageSrc === '' || utilities.length === 0 || price <10000 ){
+            if(location === null || who.length === 0 || imageSrc === '' || utilities.length === 0 || price <10 ){
                 return false
             }
         }

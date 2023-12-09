@@ -29,7 +29,8 @@ const NavbarRent:React.FC<NavbarRentProps> = ({
         if(session){
             router.push('/rentmanager')
         }else {
-            toast.error('Bạn chưa đăng nhập.')
+            toast.error('You are not logged in.');
+
             return;
         }
         
@@ -39,7 +40,8 @@ const NavbarRent:React.FC<NavbarRentProps> = ({
         if(session){
             router.push('/benefits')
         }else {
-            toast.error('Bạn chưa đăng nhập.')
+            toast.error('You are not logged in.');
+
             return;
         }
         
@@ -93,23 +95,25 @@ const NavbarRent:React.FC<NavbarRentProps> = ({
                         onClick={handleManager}
                         className="text-sm hover:opacity-[.8] cursor-pointer"
                     >
-                        Quản lí phòng
+                      Room management
                     </div>
                     <div 
                         className="text-sm hover:opacity-[.8] cursor-pointer"
                         onClick={handleBenefits}
                     >
-                        Doanh thu
+                       
+                        Revenue
                     </div>
                     <div 
                         onClick={()=>router.push('/contact')}
                         className="text-sm hover:opacity-[.8] cursor-pointer"
                     >
-                        Hổ trợ
+                        
+Support
                     </div>
                </div>
                <div className=" flex-row items-center justify-end hidden sm:flex">
-                <span className="text-sm text-muted text-semibold mr-3">Cho thuê phòng ?</span>
+                <span className="text-sm text-muted text-semibold mr-3">Room for rent?</span>
                     <div className=" min-w-[200px] ">
                     <Button 
                         label="Airbnb Setup"

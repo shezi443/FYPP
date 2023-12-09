@@ -16,8 +16,8 @@ const Trips = async()=>{
         return (
             <ClientOnly>
                 <EmptyState 
-                    title="Tài khoản chưa được xác thực"
-                    subtitle="Vui lòng đăng nhập lại !!"
+                    title="Unverified account"
+                    subtitle="Please log in again!!"
                 />
             </ClientOnly>
         )

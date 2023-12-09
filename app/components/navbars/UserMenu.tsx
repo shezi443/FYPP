@@ -68,7 +68,7 @@ const UserMenu:React.FC<UserMenuProps> = ({
     // handle contact
     const handleContact = useCallback(()=>{
         setIsOpen(false)
-        router.push('/contact?category=Khách')
+        router.push('/contact?category=Guest')
     },[router])
 
     // handle contact
@@ -80,7 +80,7 @@ const UserMenu:React.FC<UserMenuProps> = ({
     //handle information
     const handleInformation = useCallback(()=>{
         setIsOpen(false)
-        router.push('/informations?category=thông%20tin%20cá%20nhân')
+        router.push('/informations?category=personal%20information')
     },[router])
 
 
@@ -90,7 +90,7 @@ const UserMenu:React.FC<UserMenuProps> = ({
         <div 
          onClick={()=>router.push('/rent2')}
         className='mx-4 text-sm hover:bg-neutral-100 rounded-full px-4 py-1 transiton cursor-pointer hidden md:block'>
-            Đón tiếp khách
+           Welcome guests
             {/* {JSON.stringify(session)} */}
         </div>
         <div
@@ -137,33 +137,33 @@ const UserMenu:React.FC<UserMenuProps> = ({
                 {session ? (
                     <>
                          <MenuItem
-                            label='Trang chủ'
+                           label='Home'
                             onClick={handleHome}
                         />
                         <MenuItem
-                            label='Chuyến đi'
+                            label='Trip'
                             onClick={handleTrips}
                         />
                         <MenuItem
-                            label='Danh sách yêu thích'
+                            label='Wishlist'
                             onClick={handleFavorite}
                         />
                         <MenuItem
-                            label='Quản lí tài khoản'
+                            label='Account Management'
                             onClick={handleInformation}
                         />
                         <MenuItem
-                            label='Quản lí nhà/phòng cho thuê'
+                          label='Rental management'
                             onClick={handleRent}
                         />
                         <MenuItem
-                            label='Trung tâm trợ giúp'
+                            label='Help Center'
                             onClick={handleContact}
                         />
                         <hr className='mb-2'/>
                         <MenuItem 
                                  onClick={() =>signOut()}
-                                 label='Đăng Xuất'
+                                 label='Sign Out'
                              />
                     </>
                 ):(

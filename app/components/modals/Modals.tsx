@@ -65,7 +65,7 @@ const Modals:React.FC<ModalsProps> = ({
         if(checkRent){
           onSubmit()
         }else {
-          toast.error("Bạn chắc chắn đã điền đầy đủ thông tin và giá > 10000 vnđ.");
+          toast.error("You are sure you have filled in enough information and the price is > 10 PKR.");
           return;
         }
       }else {

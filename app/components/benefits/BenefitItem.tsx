@@ -34,7 +34,7 @@ const BenefitItem:React.FC<BenefitItemProps>= ({
                 {new Date(endDay).getMonth() + 1} /
                 {new Date(endDay).getFullYear()} 
             </td>
-            <td className="text-end">{totalPrice.toLocaleString('vi', {style : 'currency', currency : 'VND'})}</td>
+            <td className="text-end">{totalPrice.toLocaleString('vi', {style : 'currency', currency : 'PKR'})}</td>
         </tr>
         
     )

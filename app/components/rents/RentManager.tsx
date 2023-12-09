@@ -77,7 +77,8 @@ const RentManager:React.FC<RentManagerProps> =({
         setOpen(false);
         console.log(title)
         if(title === 'lowprice'){
-            setTitleSort('Giá thấp đến cao');
+            setTitleSort(
+                'Price low to high');
 
            let result =  filter.sort((a,b)=>{
                 if(a.price >b.price) return 1;
@@ -86,7 +87,8 @@ const RentManager:React.FC<RentManagerProps> =({
             });
             setArrayListing(result);
         }else if(title === 'hightprice'){
-            setTitleSort('Giá cao đến thấp');
+            setTitleSort(
+                'Price high to low');
             let result =  filter.sort((a,b)=>{
                  if(a.price >b.price) return -1;
                  if(a.price <b.price) return 1;
@@ -94,7 +96,7 @@ const RentManager:React.FC<RentManagerProps> =({
              });
              setArrayListing(result);
         }else if(title === 'new'){
-            setTitleSort('Đăng mới nhất');
+            setTitleSort('Latest Postt');
             let result = filter.sort((a,b)=>{
                 if(a.createdAt >b.createdAt) return 1;
                 if(a.createdAt <b.createdAt) return -1;
@@ -102,7 +104,7 @@ const RentManager:React.FC<RentManagerProps> =({
             })
             setArrayListing(result);
         } else if(title === 'old') {
-            setTitleSort('Đăng cũ nhất');
+            setTitleSort('Oldest Posts');
             let result = filter.sort((a,b)=>{
                 if(a.createdAt >b.createdAt) return -1;
                 if(a.createdAt <b.createdAt) return 1;
@@ -110,11 +112,11 @@ const RentManager:React.FC<RentManagerProps> =({
             })
             setArrayListing(result);
         } else if(title === 'expired'){
-            setTitleSort('Đã hết hạn')
+            setTitleSort('Expired')
             let result = filter.filter((item)=> new Date(item.night)< new Date());
             setArrayListing(result)
         }else {
-            setTitleSort('Đang cho thuê')
+            setTitleSort('Currently for rent')
             let result = filter.filter((item)=> new Date(item.night)> new Date());
             setArrayListing(result)
         }
@@ -128,17 +130,18 @@ const RentManager:React.FC<RentManagerProps> =({
                         <div className="font-bold text-2xl py-4">Cho thuê</div>
                         
                         <div className="py-4">
-                            <div className="text-md font-bold " >Danh mục trống</div>
-                            <div className="text-[0.8rem] font-light pb-4">Đă đến lúc bạn bắt đầu cho thuê phòng với Airbnb.</div>
+                            <div className="text-md font-bold " >Empty category</div>
+                            <div className="text-[0.8rem] font-light pb-4">It's time for you to start renting out a room with Airbnb.</div>
                             <hr/>
                             <div
                                 className=" py-4  "
                             >
-                                <button className="border-[1px] rounded-lg px-4 py-4 hover:bg-neutral-200 transition text-sm cursor-pointer" onClick={()=>router.push('/rent2')}>Bắt đầu cho thuê</button>
+                                <button className="border-[1px] rounded-lg px-4 py-4 hover:bg-neutral-200 transition text-sm cursor-pointer" onClick={()=>router.push('/rent2')}>
+Start leasing</button>
                             </div>
                         </div>
                         <hr/>
-                        <div className="text-[0.8rem] py-4 cursor-pointer">Bạn gặp khó khăn / chưa biết cách cho thuê phòng !!!<span onClick={()=>router.push('/contact?category=Khách')} className="underline cursor-pointer">Truy cập Trung tâm trợ giúp</span></div>
+                        <div className="text-[0.8rem] py-4 cursor-pointer">Are you having difficulties or don't know how to rent a room? <span onClick={()=>router.push('/contact?category=Guest')} className="underline cursor-pointer">Visit the Help Center</span></div>
                     </Container>
     
                 </ClientOnly>
@@ -148,8 +151,9 @@ const RentManager:React.FC<RentManagerProps> =({
             <div className="w-full h-auto relative">
                 <div className="w-full h-[300px] absolute top-0 left-0 bg-neutral-950/60 flex items-center justify-center">
                     <Header
-                        title="Danh mục đang cho thuê"
-                        subtitle="Tổng hợp danh sách những địa điểm đang được cho thuê."
+                      title="Rental Categories"
+                      subtitle="A compilation of listings for currently available places."
+                      
                         big
                         center
                         white
@@ -166,8 +170,8 @@ const RentManager:React.FC<RentManagerProps> =({
             </div>
             <div className="block lg:hidden">
                 <Header 
-                    title="Không thể xem"
-                    subtitle="Chuyển sang loptop để quản lí mục cho thuê"
+                    title="Not Viewable"
+                    subtitle="Switch to a laptop for managing rental listings."                    
                     center
                 />
                 <div className="px-4 py-4" >
@@ -175,7 +179,7 @@ const RentManager:React.FC<RentManagerProps> =({
                         onClick={()=>router.push('/rent2')}
                         className="text-[0.8rem] underline hover:text-neutral-500 cursor-pointer"
                     >
-                        Trở lại
+                      Return
                     </div>
                 </div>
             </div>
@@ -191,12 +195,13 @@ const RentManager:React.FC<RentManagerProps> =({
                         </div>
                     </div>
                     <div className={`absolute  top-7 right-8 z-20 bg-white px-4  rounded-md shadow-md text-sm  w-full overflow-hidden transition-all ${open ?"h-auto py-4 flex flex-col gap-2":"h-0 "}`}>
-                        <div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={()=>handleSort('hightprice')}>Giá cao đến thấp</div>
-                        <div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={()=>handleSort('lowprice')}>Giá thấp đến cao</div>
-                        <div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={()=>handleSort('old')}>Đăng mới nhất</div>
-                        <div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={()=>handleSort('new')}>Đăng cũ nhất</div>
-                        <div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={()=>handleSort('expired')}>Đã hết hạn</div>
-                        <div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={()=>handleSort('inpired')}>Đang cho thuê</div>
+                    <div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={() => handleSort('hightprice')}>High to Low Price</div>
+<div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={() => handleSort('lowprice')}>Low to High Price</div>
+<div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={() => handleSort('old')}>Latest Post</div>
+<div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={() => handleSort('new')}>Oldest Post</div>
+<div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={() => handleSort('expired')}>Expired</div>
+<div className="hover:text-neutral-600 transition-all cursor-pointer" onClick={() => handleSort('inpired')}>Available for Rent</div>
+
                     </div>
                 </div>
                 </div>
@@ -204,13 +209,14 @@ const RentManager:React.FC<RentManagerProps> =({
                     
                     <table className="w-full text-center table-auto">
                         <tr>
-                            <th>Tiêu đề</th>
-                            <th>Mã phòng</th>
-                            <th>Ngày bắt đầu </th>
-                            <th>Ngày kết thúc</th>
-                            <th>Giá</th>
-                            <th>Chi tiết</th>
-                            <th>Xóa </th>
+                        <th>Title</th>
+<th>Room Code</th>
+<th>Start Date</th>
+<th>End Date</th>
+<th>Price</th>
+<th>Details</th>
+<th>Delete</th>
+
                         </tr>
                     
                         {arrayListing.slice(start,end).map((item)=>{
@@ -228,17 +234,17 @@ const RentManager:React.FC<RentManagerProps> =({
                                         {new Date(item.night).getMonth()+1}/
                                         {new Date(item.night).getFullYear()}
                                     </td>
-                                    <td className="text-end px-4">{item?.price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}</td>
+                                    <td className="text-end px-4">{item?.price.toLocaleString('en', {style : 'currency', currency : 'PKR'})}</td>
                                     <td>
                                         <Button
-                                            label="Chi tiết"
+                                            label="Details"
                                             onClick={()=>router.push(`/listings/${item?.id}`)}
                                             outline
                                         />
                                     </td>
                                     <td>
                                         <Button
-                                            label="Xóa"
+                                            label="Delete"
                                             onClick={()=>handleDeleted(item.id)}
                                         />
                                     </td>
@@ -260,7 +266,7 @@ const RentManager:React.FC<RentManagerProps> =({
                         onClick={()=>router.push('/rent2')}
                         className="text-[0.8rem] underline hover:text-neutral-500 cursor-pointer"
                     >
-                        Trở lại
+                        Return
                     </div>
                 </div>
             </div>

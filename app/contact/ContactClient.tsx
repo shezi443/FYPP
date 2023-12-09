@@ -21,15 +21,15 @@ interface ContactClientProps {
 
 const menu = [
     {
-        label:"Khách",
+        label:"Guest",
         description:"This property is close to the beach!"
     },
     {
-        label:"Chủ nhà",
+        label:"Host",
         description:"This property is close to the beach!"
     },
     {
-        label:"Tổ chức",
+        label:"Organization",
         description:"This property is close to the beach!"
     },
     {
@@ -39,13 +39,13 @@ const menu = [
 ]
 const menu2 = [
     {
-        title:"Chính sách cộng đồng của chúng tôi",
-        description:"Cách chúng tôi xây dựng một nền tảng của sự tin tưởng.",
+        title:"Our Community Policy",
+        description:"How we build a platform of trust.",
         img:"/contact-01.webp"
     },
     {
-        title:"Mẹo và hướng dẫn về an toàn",
-        description:"Tài nguyên giúp đảm bảo an toàn cho du khách, chủ nhà.",
+        title: "Safety Tips and Guides",
+        description: "Resources to ensure safety for travelers and hosts.",
         img:"/contact-02.webp"
     }
 ]
@@ -67,13 +67,13 @@ const ContactClient:React.FC<ContactClientProps>= ({
         <ContactMenuMain />
     )
 
-    if(category === 'Khách')
+    if(category === 'Guest')
     {
         bodyContent =(
             <ContactGuest />
         )
     }
-    if(category === 'Chủ nhà')
+    if(category === 'Host')
     {
         bodyContent =(
             <ContactHost />
@@ -90,8 +90,8 @@ const ContactClient:React.FC<ContactClientProps>= ({
              <div className="w-full h-auto relative">
                 <div className="w-full h-[300px] absolute top-0 left-0 bg-neutral-950/60 flex items-center justify-center">
                     <Header
-                        title="Trung tâm trợ giúp"
-                        subtitle="Liên hệ chúng tôi bất cứ khi nào bạn cần"
+                         title="Help Center"
+                         subtitle="Contact us anytime you need assistance"    
                         big
                         center
                         white
@@ -134,7 +134,7 @@ const ContactClient:React.FC<ContactClientProps>= ({
                         py-8
                 "
             >
-                <div className="font-bold text-white py-4 text-lg">Khám phá thêm</div>
+                <div className="font-bold text-white py-4 text-lg">Explore more</div>
                 <div
                     className="
                         grid
@@ -158,15 +158,15 @@ const ContactClient:React.FC<ContactClientProps>= ({
                         })}
                     </div>
                     <div className="flex flex-col gap-4 col-span-1 sm:col-span-2 md:col-span-1">
-                        <div className="font-bold text-lg text-white">Bạn cần liên lạc ?</div>
-                        <div className="text-white text-[0.8rem] font-light">Để bắt đầu, vui lòng trả lời một số câu hỏi để chúng tôi có thể kết nối bạn với bộ phận phù hợp.</div>
+                        <div className="font-bold text-lg text-white">Need to contact us?</div>
+                        <div className="text-white text-[0.8rem] font-light">To get started, please answer some questions so we can connect you with the appropriate department.</div>
                         <div >
                             <Button 
-                                label="Liên lạc với chúng tôi"
+                                label="Contact us"
                                 onClick={()=>{}}
                             />
                         </div>
-                        <div className="text-white text-[0.8rem]">Bạn cũng có thể <span className="underline cursor-pointer">gửi phản hồi cho chúng tôi</span></div>
+                        <div className="text-white text-[0.8rem]">You can also<span className="underline cursor-pointer">  send feedback to us</span></div>
                     </div>
                 </div>
             </div>

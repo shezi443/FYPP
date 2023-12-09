@@ -41,22 +41,23 @@ const ContactHost =() =>{
                         Airbnb.
                     </div>
                     <div className="text-lg md:text-3xl text-center">
-                        Bạn có thể kiếm được
+                    You can earn
                     </div>
                     <div className="text-semibold text-2xl md:text-4xl text-center">
-                        500.000 đ/ đêm
+                    50000 PKR per night
                     </div>
-                    <div className="underline text-sm text-neutral-500 text-center cursor-pointer">Tìm hiểu cách chúng tôi ước tính thu nhập của bạn.</div>
+                    <div className="underline text-sm text-neutral-500 text-center cursor-pointer">Learn how we estimate your income</div>
                     <div className=" border-[1px] rounded-full px-4 py-2 flex gap-6 items-center cursor-pointer">
                         <div><FcSearch size={30}/></div>
                         <div >
-                            <div className="text-sm font-bold">Thành phố Hồ Chí Minh</div>
-                            <div className="flex items-ceter text-sm ">Toàn bộ nhà <BsDot className="flex items-center"/> 2 phòng ngủ</div>
+                        <div className="text-sm font-bold">Lahore</div>
+<div className="flex items-center text-sm">Entire house <BsDot className="flex items-center"/> 2 bedrooms</div>
+
                         </div>
                     </div>
                 </div>
                 <div className="w-full h-[450px]">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.724840195037!2d106.69723175997817!3d10.678453060950567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317530403c4e3c23%3A0x9e8eec6b7047566e!2z4bqkcCAyLCBOaMahbiDEkOG7qWMsIE5ow6AgQsOoLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1692588361696!5m2!1svi!2s" className="w-full h-full"   loading="lazy" ></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212645.32758412763!2d73.08610799999998!3d33.61611625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfd07891722f%3A0x6059515c3bdb02b6!2sIslamabad%2C%20Islamabad%20Capital%20Territory!5e0!3m2!1sen!2s!4v1701936174703!5m2!1sen!2s" width="400" height="300"   loading="lazy" ></iframe>
                 </div>
                 
             </div>
@@ -65,7 +66,7 @@ const ContactHost =() =>{
                         <div className="grid grid-cols-2  items-center gap-6 text-sm font-light w-full"> 
                                 <div className="flex gap-2">
                                     
-                                    <div className="flex justify-start">Dễ dàng cho thuê nhà với </div>
+                                    <div className="flex justify-start">Easy to rent a house with</div>
                                 </div>
                                 <div className="w-full flex justify-end  sm:w-auto sm:col-span-1">
                                 <span 
@@ -83,16 +84,16 @@ const ContactHost =() =>{
                         <div className="grid grid-cols-2  items-center gap-4 text-sm font-light w-full"> 
                                 <div className="flex gap-2">
                                      
-                                    <div className="flex justify-start">Hướng dẫn riêng từ một chủ nhà siêu câp </div>
+                                    <div className="flex justify-start">Exclusive guidance from a superhost</div>
                                 </div>
                                 <div className="w-full flex  justify-end w-auto sm:col-span-1 ">
-                                    <span className="underline cursor-pointer">kết nối ngay.</span>
+                                    <span className="underline cursor-pointer">connect now</span>
                                 </div>
                         </div>
                         <div className="grid grid-cols-2  items-center gap-4 text-sm font-light w-full"> 
                                 <div className="flex gap-2">
                                     
-                                    <div className="flex justify-start">Hổ trợ đặt biệt từ </div>
+                                    <div className="flex justify-start">Special support from</div>
                                 </div>
                                 <div className="w-full flex justify-end sm:w-auto sm:col-span-1">
                                     <span className="underline cursor-pointer">Airbnb.</span>
@@ -127,7 +128,7 @@ const ContactHost =() =>{
                                             className='text-blue-700 italic underline text-[0.8rem] cursor-pointer'
                                             onClick={()=>router.push(`/contact/${item.id}`)}
                                         >
-                                            Đến bài viết
+                                            Read the article
                                         </div>
                                     </div>
                                 </div>

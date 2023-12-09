@@ -42,82 +42,83 @@ const responsive = {
 
 
 export const categories = [
-    {
-      label: 'Biển',
-      icon: TbBeach,
-      description: 'Nơi bạn ở giáp biển !',
-    },
-    {
-      label: 'Cối xoay ',
-      icon: GiWindmill,
-      description: 'Cánh đồng cối xoay gió!',
-    },
-    {
-      label: 'Hiện đại',
-      icon: MdOutlineVilla,
-      description: 'Thành thị hiện đại, sôi động, nhiều tiện ích!'
-    },
-    {
-      label: 'Vùng quê',
-      icon: TbMountain,
-      description: 'Vùng đồng quê yên bình, thư giản!'
-    },
-    {
-      label: 'Hồ bơi',
-      icon: TbPool,
-      description: 'Nhà ở có hồ bơi cá nhân!'
-    },
-    {
-      label: 'Đảo',
-      icon: GiIsland,
-      description: 'Vùng đảo!'
-    },
-    {
-      label: 'Hồ ',
-      icon: GiBoatFishing,
-      description: 'Gần hồ tự nhiên, mát mẻ, trong lành!'
-    },
-    {
-      label: 'Băng',
-      icon: FaSkiing,
-      description: 'Vùng băng tuyết phủ, trải nghiệm, khám phá!'
-    },
-    {
-      label: 'Lâu đài',
-      icon: GiCastle,
-      description: 'Kiến trúc lâu đài!'
-    },
-    {
-      label: 'Hang',
-      icon: GiCaveEntrance,
-      description: 'Hang động phục chế !'
-    },
-    {
-      label: 'Cấm trại',
-      icon: GiForestCamp,
-      description: 'Khu vực cấm trại!'
-    },
-    {
-      label: 'Vùng cực',
-      icon: BsSnow,
-      description: 'Tái hiện vùng cực !'
-    },
-    {
-      label: 'Sa mạc',
-      icon: GiCactus,
-      description: 'Khu vực tái phục dựng sa mạc'
-    },
-    {
-      label: 'Nhà chồi',
-      icon: GiBarn,
-      description: 'Nhà chồi trên đồi !'
-    },
-    {
-      label: 'Nhà Lux',
-      icon: IoDiamond,
-      description: 'Kiến trúc Luxury sang trọng bậc nhất Airbnb!'
-    }
-  ]
+  {
+    label: 'Beach',
+    icon: TbBeach,
+    description: 'Where you stay is by the sea!',
+  },
+  {
+    label: 'Windmill',
+    icon: GiWindmill,
+    description: 'Field of windmills!',
+  },
+  {
+    label: 'Modern',
+    icon: MdOutlineVilla,
+    description: 'Modern, vibrant urban area with many amenities!'
+  },
+  {
+    label: 'Countryside',
+    icon: TbMountain,
+    description: 'Peaceful and tranquil countryside!'
+  },
+  {
+    label: 'Pool',
+    icon: TbPool,
+    description: 'Residence with a private swimming pool!'
+  },
+  {
+    label: 'Island',
+    icon: GiIsland,
+    description: 'Island area!'
+  },
+  {
+    label: 'Lake',
+    icon: GiBoatFishing,
+    description: 'Near a natural lake, cool and fresh!'
+  },
+  {
+    label: 'Snow',
+    icon: FaSkiing,
+    description: 'Snow-covered area, experience and explore!'
+  },
+  {
+    label: 'Castle',
+    icon: GiCastle,
+    description: 'Castle architecture!'
+  },
+  {
+    label: 'Cave',
+    icon: GiCaveEntrance,
+    description: 'Reconstructed cave!'
+  },
+  {
+    label: 'Campsite',
+    icon: GiForestCamp,
+    description: 'Campsite area!'
+  },
+  {
+    label: 'Extreme',
+    icon: BsSnow,
+    description: 'Recreate extreme conditions!'
+  },
+  {
+    label: 'Desert',
+    icon: GiCactus,
+    description: 'Reconstructed desert area'
+  },
+  {
+    label: 'Barn',
+    icon: GiBarn,
+    description: 'Tent house on the hill!'
+  },
+  {
+    label: 'Luxury House',
+    icon: IoDiamond,
+    description: 'The most luxurious architecture on Airbnb!'
+  }
+]
+
 const Categories =() =>{
     const fillterModal = useFilter();
     const params = useSearchParams();// take param from url

@@ -180,7 +180,7 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
         child:countChild
        })
        .then(()=>{
-        toast.success("reservated!");
+        toast.success("reserved!");
         router.refresh();
         setDateRange(initialDateRange)
        })
@@ -265,13 +265,13 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                         <span
                             className="font-light text-2xl "
                         >
-                            {price.toLocaleString('it-IT', {style : 'currency', currency : 'VND'})} 
+                            {price.toLocaleString('it-IT', {style : 'currency', currency : 'PKR'})} 
                         </span>
-                        /đêm
+                        /night
                     </p>
                     <div>
                         <div className="flex gap-1 cursor-pointer">
-                            <div className="text-sm flex"><AiFillStar/>{handleCountAllStar()}<span className="flex items-center"><BsDot/></span><span className="underline font-bold">{commentById.length} đánh giá</span></div>
+                        <div className="text-sm flex"><AiFillStar/>{handleCountAllStar()}<span className="flex items-center"><BsDot/></span><span className="underline font-bold">{commentById.length} review</span></div>
                         </div>
                     </div>
                 </div>
@@ -279,10 +279,10 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                 <div className='w-full h-[7px] bg-neutral-100'></div>
                     <div className="grid grid-cols-2 m-4" onClick={handleOpenCalendar}>
                         <div className="border-[1px] border-r-[1px] text-[0.6rem] flex items-center px-2 ">
-                            <div className=" uppercase">Nhận phòng:</div>
+                            <div className=" uppercase">Check-in:</div>
                             <div>
                                 <div className='text-[0.6rem] font-light'>
-                                    {dateRange.startDate?.getDate()} thg
+                                    {dateRange.startDate?.getDate()}-
                                     {dateRange.startDate?.getMonth()}-
                                     {dateRange.startDate?.getFullYear() } 
                                 </div>
@@ -298,7 +298,7 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                                     ?
                                         ""
                                     : 
-                                        "trả phòng :"
+                                        "Check-out:"
                                     }
                             </div>
                             <div>
@@ -308,9 +308,9 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                                     dateRange.startDate?.getMonth() === dateRange.endDate?.getMonth() &&
                                     dateRange.startDate?.getFullYear() === dateRange.endDate?.getFullYear() 
                                     ?
-                                        "Đặt phòng ở đây"
+                                        "Book a room here"
                                     : 
-                                    dateRange.endDate?.getDate() +"thg"+
+                                    dateRange.endDate?.getDate() +""+
                                     dateRange.endDate?.getMonth() +"-"+
                                     dateRange.endDate?.getFullYear() 
                                     }
@@ -363,7 +363,7 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                         
                     "
                    >
-                    <div className="font-semibold pb-6 ">Chọn thành viên thuê phòng</div>
+                   <div className="font-semibold pb-6 ">Select room occupants</div>
                     <div
                         className="
                             grid 
@@ -387,8 +387,8 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                     </div>
                     <div className="flex justify-between items-center my-4">
                         <div >
-                            <div className="font-bold">Người lớn</div>
-                            <div className="font-light text-sm text-neutral-700">Từ 13 tuổi trở lên</div>
+                        <div className="font-bold">Adults</div>
+<div className="font-light text-sm text-neutral-700">Ages 13 and above</div>
                         </div>
                         <div className="flex items-center gap-2">
                             
@@ -410,8 +410,8 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                     {/* child */}
                     <div className="flex justify-between items-center my-4">
                         <div >
-                            <div className="font-bold">Trẻ em </div>
-                            <div className="font-light text-sm text-neutral-700">Từ dưới 12 tuổi</div>
+                        <div className="font-bold">Children</div>
+<div className="font-light text-sm text-neutral-700">Ages 12 and under</div>
                         </div>
                         <div className="flex items-center gap-2">
                             
@@ -433,8 +433,8 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                     {/* pet */}
                     <div className="flex justify-between items-center my-4">
                         <div >
-                            <div className="font-bold">Thú cưng </div>
-                            <div className="font-light text-sm text-neutral-700">Bạn có mang theo thú cưng chứ ? </div>
+                             <div className="font-bold">Pets</div>
+<div className="font-light text-sm text-neutral-700">Do you bring a pet with you?</div>
                         </div>
                         <div className="flex items-center gap-2">
                             
@@ -460,7 +460,7 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                             py-4
                         "
                     >
-                        Chỗ ở này cho phép tối đa {guestCount} khách, không tính em bé. Nếu bạn mang theo nhiều hơn 2 thú cưng, vui lòng báo cho Chủ nhà biết.
+                         This accommodation allows a maximum of {guestCount} guests, excluding infants. If you bring more than 2 pets, please inform the host.
                     </div>
                     
                    </div>
@@ -488,11 +488,11 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                                     `
                                 }
                             >
-                                Đặt phòng
+                                Book a room
                             </button>
                                 
                             <div className="text-center text-sm font-light py-2">
-                                Bạn vẫn chưa bị trừ tiền
+                            You have not been charged yet
                             </div>
                         </div>
                     ):(
@@ -512,30 +512,30 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
                                     text-white
                                 "
                             >
-                                Kiểm ra tình trạng còn phòng
+                                                          Check room availability
                             </button>
                             <div className="text-center text-sm font-light py-2">
-                                Kiểm tra lịch đặt phòng và số lượng thành viên để đặt phòng
+                            Check booking schedule and number of members to book a room
                             </div>
                         </div>
                     )}
                     {countDay !== 0 && (
                         <div className="py-2 text-sm font-light flex flex-col gap-4">
                         <div className="flex justify-between items-center">
-                            <div><span>{price.toLocaleString('it-IT', {style : 'currency', currency : 'VND'})} </span> x <span>{countDay} đêm</span></div>
-                            <div>{totalPrice.toLocaleString('it-IT', {style : 'currency', currency : 'VND'})} </div>
+                            <div><span>{price.toLocaleString('it-IT', {style : 'currency', currency : 'PKR'})} </span> x <span>{countDay}night</span></div>
+                            <div>{totalPrice.toLocaleString('it-IT', {style : 'currency', currency : 'PKR'})} </div>
                         </div>
                         <div className="flex justify-between items-center">
-                            <div><span>Phí dịch vụ</span></div>
-                            <div>{((price * countDay)*0.1).toLocaleString('it-IT', {style : 'currency', currency : 'VND'})} </div>
+                            <div><span>Service fee:</span></div>
+                            <div>{((price * countDay)*0.1).toLocaleString('it-IT', {style : 'currency', currency : 'PKR'})} </div>
                         </div>
                         <hr />
                         <div className="flex justify-between items-center">
                             <div>
-                                Tổng trước thuế
+                            Total before tax:
                             </div>
                             <div>
-                                {Math.round(totalPrice +((price * countDay)*0.1)).toLocaleString('it-IT', {style : 'currency', currency : 'VND'}) } 
+                                {Math.round(totalPrice +((price * countDay)*0.1)).toLocaleString('it-IT', {style : 'currency', currency : 'PKR'}) } 
                             </div>
                         </div>
                         </div>

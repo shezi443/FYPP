@@ -12,23 +12,25 @@ const RentHeader2 = () =>{
         <div className="py-8">
             <div className=" text-center mt-4">
                 <span className="text-4xl font-semibold"><span className="text-rose-600 ">Air</span>cover</span>
-                <div className="font-semibold">cho chủ nhà </div>
+                <div className="font-semibold">for the homeowner</div>
             </div>
             <div className="mt-4 text-start md:text-center">
-                <span className="text-xl md:text-4xl font-semibold text-center">Cho thuê trên Airbnb với chương trình bảo vệ toàn diện</span>
+                <span className="text-xl md:text-4xl font-semibold text-center">
+Rent on Airbnb with comprehensive protection</span>
                 <table className="w-full mt-6">
                     <tbody>
                     <tr >
                         <td></td>
                         <td className="text-sm md:text-md text-center">Airbnb</td>
-                        <td className="text-sm md:text-md text-center">Đơn vị cạnh tranh</td>
+                        <td className="text-sm md:text-md text-center">
+Competitive unit</td>
                     </tr>
                     <tr className="md:border-b-[1px]">
                         <td className="md:max-w-sm ">
                             <div className="w-full lg:w-1/2 py-5">
                                 <RentContent
-                                    title="Xác minh danh tính của khách"
-                                    content="Hệ thống xác minh toàn diện của chúng tôi kiểm tra các thông tin như tên, địa chỉ, giấy tờ tùy thân do chính phủ cấp và nhiều thông tin khác để xác nhận danh tính của khách đặt phòng/đặt chỗ trên Airbnb."
+                                    title="Verify the guest's identity"
+                                    content="Our comprehensive verification system checks information such as name, address, government-issued identification, and many other details to confirm the identity of guests booking/reserving on Airbnb."
                                     bold
                                     hidden
                                 />
@@ -48,23 +50,25 @@ const RentHeader2 = () =>{
                     </tr>
                     <tr className=" md:hidden border-b-[1px]">
                         <td colSpan={3} className="pb-5">
-                            <RentContent
-                                padding
-                                content="Hệ thống xác minh toàn diện của chúng tôi kiểm tra các thông tin như tên, địa chỉ, giấy tờ tùy thân do chính phủ cấp và nhiều thông tin khác để xác nhận danh tính của khách đặt phòng/đặt chỗ trên Airbnb."
-                                bold
-                            />
+                        <RentContent
+    padding
+    content="Our comprehensive verification system checks information such as name, address, government-issued identification, and many other details to confirm the identity of guests booking/reserving on Airbnb."
+    bold
+/>
+
                         </td>
                     </tr>
                     {/* item 2  */}
                     <tr className="md:border-b-[1px]">
                         <td className="md:max-w-sm ">
                             <div className="w-full lg:w-1/2 py-5">
-                                <RentContent
-                                    title="Sàng lọc yêu cầu đặt phòng"
-                                    content="Công nghệ độc quyền của chúng tôi phân tích hàng trăm yếu tố trong mỗi yêu cầu đặt phòng để chặn những lượt đặt cho thấy nguy cơ cao về việc tổ chức tiệc tùng gây phiền toái và thiệt hại tài sản."
-                                    bold
-                                    hidden
-                                />
+                            <RentContent
+    title="Screening reservation requests"
+    content="Our exclusive technology analyzes hundreds of factors in each reservation request to block bookings that show a high risk of organizing disruptive parties and causing property damage."
+    bold
+    hidden
+/>
+
                             </div>
                         </td>
 
@@ -83,7 +87,7 @@ const RentHeader2 = () =>{
                         <td colSpan={3} className="pb-5">
                             <RentContent
                                 padding
-                                content="Công nghệ độc quyền của chúng tôi phân tích hàng trăm yếu tố trong mỗi yêu cầu đặt phòng để chặn những lượt đặt cho thấy nguy cơ cao về việc tổ chức tiệc tùng gây phiền toái và thiệt hại tài sản."
+                                content="Our exclusive technology analyzes hundreds of factors in each reservation request to block bookings that show a high risk of organizing disruptive parties and causing property damage"
                                 bold
                             />
                         </td>
@@ -93,8 +97,8 @@ const RentHeader2 = () =>{
                         <td className="md:max-w-sm ">
                             <div className="w-full lg:w-1/2 py-5">
                                 <RentContent
-                                    title="Bảo vệ thiệt hại trị giá 3 triệu USD"
-                                    content="Airbnb sẽ bồi hoàn cho bạn về thiệt hại do khách gây ra đối với nhà và đồ đạc của bạn, đồng thời bao gồm các hình thức bảo vệ đặc biệt sau:"
+                                    title="Protection for property damage up to $3 million"
+                                    content="Airbnb will reimburse you for damage caused by guests to your property and belongings, including the following special protection measures:"
                                     hidden
                                     bold
                                 />
@@ -114,11 +118,12 @@ const RentHeader2 = () =>{
                     </tr>
                     <tr className=" md:hidden border-b-[1px]">
                         <td colSpan={3} className="pb-5">
-                            <RentContent
-                                padding
-                                content="Airbnb sẽ bồi hoàn cho bạn về thiệt hại do khách gây ra đối với nhà và đồ đạc của bạn, đồng thời bao gồm các hình thức bảo vệ đặc biệt sau:"
-                                bold
-                            />
+                        <RentContent
+    padding
+    content="Airbnb will reimburse you for damage caused by guests to your home and belongings, including special protection measures:"
+    bold
+/>
+
                         </td>
                     </tr>
                     {/* item 4  */}
@@ -127,7 +132,7 @@ const RentHeader2 = () =>{
                             <div className="w-full lg:w-1/2 py-5">
                                 <RentContent
                                     title=""
-                                    content="Tác phẩm nghệ thuật và tài sản có giá trị"
+                                    content="Artwork and valuable property"
                                     bold
                                     
                                 />
@@ -151,7 +156,7 @@ const RentHeader2 = () =>{
                             <div className="w-full lg:w-1/2 py-5">
                                 <RentContent
                                     title=""
-                                    content="Ô tô và thuyền"
+                                    content="Cars and boats"
                                     bold
                                     
                                 />
@@ -175,7 +180,7 @@ const RentHeader2 = () =>{
                             <div className="w-full lg:w-1/2 py-5">
                                 <RentContent
                                     title=""
-                                    content="Thiệt hại do thú cưng"
+                                    content="Damage caused by pets"
                                     bold
                                     
                                 />
@@ -199,7 +204,8 @@ const RentHeader2 = () =>{
                             <div className="w-full lg:w-1/2 py-5">
                                 <RentContent
                                     title=""
-                                    content="Tổn thất thu nhập"
+                                    content="
+                                    Income loss"
                                     bold
                                     
                                 />
@@ -223,7 +229,8 @@ const RentHeader2 = () =>{
                             <div className="w-full lg:w-1/2 py-5">
                                 <RentContent
                                     title=""
-                                    content="Vệ sinh chuyên sâu"
+                                    content="
+                                    Intensive cleaning"
                                     bold
                                     
                                 />
@@ -245,12 +252,13 @@ const RentHeader2 = () =>{
                     <tr className="md:border-b-[1px]">
                         <td className="md:max-w-sm ">
                             <div className="w-full lg:w-1/2 py-5">
-                                <RentContent
-                                    title="Đường dây an toàn 24/24"
-                                    content="Nếu bạn cảm thấy không an toàn, ứng dụng của chúng tôi cho phép bạn liên hệ bất kể ngày đêm với nhân viên hỗ trợ an toàn, được đào tạo đặc biệt của chúng tôi – chỉ bằng một thao tác chạm."
-                                    bold
-                                    hidden
-                                />
+                            <RentContent
+    title="24/7 safety hotline"
+    content="If you ever feel unsafe, our app allows you to contact our specially trained safety support staff day or night—with just a tap."
+    bold
+    hidden
+/>
+
                             </div>
                         </td>
 
@@ -267,22 +275,25 @@ const RentHeader2 = () =>{
                     </tr>
                     <tr className=" md:hidden border-b-[1px]">
                         <td colSpan={3} className="pb-5">
-                            <RentContent
-                                padding
-                                content="Nếu bạn cảm thấy không an toàn, ứng dụng của chúng tôi cho phép bạn liên hệ bất kể ngày đêm với nhân viên hỗ trợ an toàn, được đào tạo đặc biệt của chúng tôi – chỉ bằng một thao tác chạm."
-                                bold
-                            />
+                        <RentContent
+    padding
+    content="If you ever feel unsafe, our app allows you to contact our specially trained safety support staff day or night—with just a tap."
+    bold
+/>
+
                         </td>
                     </tr>
                     </tbody>
                 </table>
                 <RentContent 
-                    title=""
-                    content="Kết quả so sánh dựa trên thông tin công khai và quyền lợi được cung cấp miễn phí của các đơn vị cạnh tranh tính đến ngày 22/10. Tìm hiểu thông tin chi tiết và các trường hợp ngoại lệ tại đây."
-                />
+    title=""
+    content="Comparison based on publicly available information and benefits provided for free by competing entities as of 22/10. Learn more details and exceptions here."
+/>
+
                 <div className="w-[70%] sm:w-[40%] md:w-1/3 mt-4">
                 <Button 
-                    label="Tìm hiểu thêm"
+                    label="
+                    Find out more"
                     outline
                     onClick={()=>{}}
                     

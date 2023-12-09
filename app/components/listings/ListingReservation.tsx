@@ -35,21 +35,21 @@ const ListingReservation:React.FC<ListingReservationProps> =({
     // console.log(new Date(dateRange.startDate as Date) )
     return <div className="mt-6">
                 {/* <div>{price} vnd / night</div> */}
-                <p className='text-lg font-semibold'>Dịch vụ sẵn sàng cho những đêm</p>
+                <p className='text-lg font-semibold'>Services ready for the nights</p>
                 <div className='flex items-center'>
                     <div className='text-sm font-light'>
-                        {dateRange.startDate?.getDate()} thg
+                        {dateRange.startDate?.getDate()}-
                         {dateRange.startDate?.getMonth() as number+1}-
                         {dateRange.startDate?.getFullYear() } 
                     </div>
                     <span className='px-4'> - </span>
                     <div className='text-sm font-light'>
-                        {new Date(maxnight)?.getDate()} thg
+                        {new Date(maxnight)?.getDate()}- 
                         {new Date(maxnight)?.getMonth()+1} -
                         {new Date(maxnight)?.getFullYear()} 
                     </div>
                 </div>
-                <div className='font-light py-4'> {location?.region} - {location?.label} - {price} vnđ / đêm </div>
+                <div className='font-light py-4'> {location?.region} - {location?.label} - {price} PKR / night </div>
                 <DateRange 
                     rangeColors={["#262626"]}
                     minDate={dateRange.startDate}

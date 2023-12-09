@@ -87,7 +87,7 @@ const ListingInfo:React.FC<ListingInfoProps> = ({
         >
             <div className="flex flex-col gap-2">
                 <div className="text-xl font-semibold flex flex-row items-center justify-between gap-2">
-                    <div>Chủ nhà {user?.name}</div>
+                <div>Host{user?.name}</div>
                     <Image 
                         src={user?.image as string}
                         width={50}
@@ -107,19 +107,19 @@ const ListingInfo:React.FC<ListingInfoProps> = ({
                     "
                 >
                     <div className="text-sm">
-                        {guestCount} khách 
+                        {guestCount} Guest  
                     </div>
                     -
                     <div className="text-sm">
-                        {roomCount} phòng ngủ
+                        {roomCount} bedrooms
                     </div>
                     -
                     <div className="text-sm">
-                        {bathroomCount} nhà tắm
+                        {bathroomCount}  bathrooms
                     </div>
                     -
                     <div className="text-sm">
-                        {bed} giường
+                        {bed} bed
                     </div>
                 </div>
             </div>
@@ -141,13 +141,13 @@ const ListingInfo:React.FC<ListingInfoProps> = ({
                             houseStep
                         />
                     )}
-                    <div className="flex items-center">
+                   <div className="flex items-center">
                         <div className="flex justify-center items-center"><BiMedal size={40} className="text-neutral-700 pr-2 w-full"/></div> 
-                        <p className="font-light">{user?.name} là chủ nhà siêu cấp</p>
+                        <p className="font-light">{user?.name} is a Superhost</p>
                     </div>
                     <div className="flex items-center">
                         <div className="flex justify-center items-center"><AiFillBell size={40} className="text-neutral-700 pr-2 w-full"/></div> 
-                        <p className="font-light">Hủy miễn phí trong 48h</p>
+                        <p className="font-light">Free cancellation within 48 hours</p>
                     </div>
                    
                 </div>
@@ -160,7 +160,7 @@ const ListingInfo:React.FC<ListingInfoProps> = ({
                             onClick={handleReadMore}
                             className="px-4 py-1 bg-neutral-300 text-white hover:bg-neutral-500 trasition"
                         >
-                            Thu gọn
+                          Minimize
                         </button>   
                         )
                         :
@@ -168,14 +168,14 @@ const ListingInfo:React.FC<ListingInfoProps> = ({
                                 onClick={handleReadMore}
                                 className="px-4 py-1 bg-neutral-300 text-white hover:bg-neutral-500 trasition"
                             >
-                                Đọc thêm 
+                                Read more
                             </button>)
                         )}
                     </div>
                  </div>
                  <hr/>
                  <div>
-                    <p className="text-lg font-semibold">Nơi này có những tiện ích gì cho bạn </p>
+                    <p className="text-lg font-semibold">What amenities does this place offer you? </p>
                     <div
                         className="grid grid-cols-2 my-6"
                     >

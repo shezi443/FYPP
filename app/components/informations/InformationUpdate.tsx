@@ -57,7 +57,7 @@ const InformationUpdate:React.FC<InformationUpdateProps> =({
     return (
         <div>
             <Header
-                title="Cập nhật thông tin cá nhân"
+               title="Update personal information"
                 subtitle=""
                 center
                
@@ -82,7 +82,7 @@ const InformationUpdate:React.FC<InformationUpdateProps> =({
                         "
                         >
                         {/* register your input into the hook by invoking the "register" function */}
-                        <label htmlFor="name" className="text-sm font-light ">Tên pháp lí</label>
+                        <label htmlFor="name" className="text-sm font-light ">Legal name</label>
                         <input 
                             id="name" 
                             {...register("name",{required: true})} 
@@ -91,7 +91,7 @@ const InformationUpdate:React.FC<InformationUpdateProps> =({
                             className="text-[0.8rem] border-[1px] rounded-md border-neutral-600 px-4 py-2"
                         />
 
-                        <label htmlFor="email" className="text-sm font-light ">Địa chỉ Email</label>
+<label htmlFor="email" className="text-sm font-light">Email address</label>
                         <input 
                             
                             id="email" {...register("email")}  
@@ -100,36 +100,36 @@ const InformationUpdate:React.FC<InformationUpdateProps> =({
                              className="text-[0.8rem] border-[1px] rounded-md border-neutral-600 px-4 py-2"
                         />
 
-                        <label htmlFor="phone" className="text-sm font-light ">Số điện thoại</label>
+                        <label htmlFor="phone" className="text-sm font-light ">Phone Number</label>
                         <input  
                             id="phone" 
                             {...register("phone")}  
-                            placeholder="Số điện thoại"
+                            placeholder="Phone Number"
                             defaultValue={information?.phone}
                              className="text-[0.8rem] border-[1px] rounded-md border-neutral-600 px-4 py-2"
                         />
 
-                        <label htmlFor="address" className="text-sm font-light ">Địa chỉ</label>
+                        <label htmlFor="address" className="text-sm font-light">Address</label>
                         <input  
                             id="address" 
                             {...register("address")}  
-                            placeholder="Địa chỉ"
+                            placeholder="Address"
                             defaultValue={information?.address}
                              className="text-[0.8rem] border-[1px] rounded-md border-neutral-600 px-4 py-2"
                         />
 
-                        <label htmlFor="emerency" className="text-sm font-light ">Liên hệ trường hợp khẩn cấp</label>
+                        <label htmlFor="emerency" className="text-sm font-light ">Emergency contact</label>
                         <input  
                             id="emerency" 
                             {...register("emerency")}  
-                            placeholder="Liên hệ trường hợp khẩn cấp"
+                            placeholder="Emergency contact"
                             defaultValue={information?.emerency}
                              className="text-[0.8rem] border-[1px] rounded-md border-neutral-600 px-4 py-2"
                         />
 
                         <input 
                             type={!info ?'submit':"button"}
-                            value="Cập nhật thông tin" 
+                            value="Update Information" 
                             className={`
                                 px-4 py-2 bg-rose-600 text-white rounded-md hover:bg-rose-500 capitalize text-sm
                                 ${info ?"cursor-not-allowed":"cursor-pointer"}
@@ -152,8 +152,9 @@ const InformationUpdate:React.FC<InformationUpdateProps> =({
                             <FcLock size={40}/>
                         </div>
                         <div>
-                            <div className="font-bold text-sm ">không hiển thị thông tin ở đây</div>
-                            <div className="text-[0.8rem] text-neutral-600 font-light">Chỉ có bạn mới được thấy thông tin bảo mật này</div>
+                        <div className="font-bold text-sm">Do not display information here</div>
+<div className="text-[0.8rem] text-neutral-600 font-light">Only you can see this security information</div>
+
                         </div>
                     </div>
                     <div className="flex flex-col gap-4 border-b-[1px] py-4 ">
@@ -161,14 +162,15 @@ const InformationUpdate:React.FC<InformationUpdateProps> =({
                             <AiFillTool size={40} className="text-neutral-400"/>
                         </div>
                         <div>
-                            <div className="font-bold text-sm ">Bạn có thể cập nhật thông tin</div>
+                        <div className="font-bold text-sm ">You can update your information</div>
                             <div className="text-[0.8rem] text-neutral-600 font-light">
-                                Cập nhật lại thông tin miễn phí 
-                                <span className="underline hover:opacity-[0.5] cursor-pointer px-2">tại đây</span> trên Airbnb.
+                            Update Information for Free
+                                <span className="underline hover:opacity-[0.5] cursor-pointer px-2">here</span> on Airbnb.
                             </div>
                             <div className="text-[0.8rem] text-neutral-600 font-light">
-                                Bạn có thể chỉnh sửa thông tin liên hệ và thông tin cá nhân. Nếu sử dụng thông tin này để xác minh danh tính, bạn sẽ cần phải xác minh lần nữa vào lần đặt tiếp theo, hoặc để tiếp tục đón tiếp khách.
-                            </div>
+    You can edit contact and personal information. If you use this information for identity verification, you will need to verify again for the next reservation, or to continue hosting guests.
+</div>
+
                         </div>
                     </div>
                     <div className="flex flex-col gap-4 border-b-[1px] py-4 ">
@@ -176,11 +178,11 @@ const InformationUpdate:React.FC<InformationUpdateProps> =({
                             <GiShare size={40} className="text-rose-400"/>
                         </div>
                         <div>
-                            <div className="font-bold text-sm">Bạn có thể chia sẻ </div>
+                        <div className="font-bold text-sm">You can share </div>
                            
-                            <div className="text-[0.8rem] text-neutral-600 font-light">
-                            Airbnb chỉ tiết lộ thông tin liên lạc cho Chủ nhà/Người tổ chức và khách sau khi đặt phòng/đặt chỗ được xác nhận.
-                            </div>
+                           <div className="text-[0.8rem] text-neutral-600 font-light">
+                           Airbnb only discloses contact information to Hosts/Organizers and guests after the booking is confirmed
+                           </div>
                         </div>
                     </div>
                 </div>

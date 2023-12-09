@@ -30,7 +30,8 @@ const NavbarMobileRent =() =>{
         ${bounch ?"opacity-1":"opacity-0"}
       `}>
         <Container>
-          <div className="text-center font-bold mb-2">Sẵn sàng cho thuê ?</div>
+        <div className="text-center font-bold mb-2">Ready to rent?</div>
+
           <Button 
                   label="Airbnb Setup"
                   onClick={rentModal.onOpen}

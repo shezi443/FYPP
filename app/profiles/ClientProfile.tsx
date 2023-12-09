@@ -43,13 +43,14 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
             toast.error('Loggin to see informations');
             return ;
         }
-        router.push('/informations?category=thông%20tin%20cá%20nhân')
+        router.push('/informations?category=personal%20information')
+
 
     },[currentUser, router]);
 
     //handle navigate contact
     const handleNavigateContact =useCallback(()=>{
-        router.push('/contact?category=Khách');
+        router.push('/contact?category=Guest');
     },[router]);
 
     // handle logged out
@@ -73,8 +74,8 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
             <div className="w-full h-auto relative ">
                     <div className="w-full h-[300px] absolute top-0 left-0 bg-neutral-950/60 flex items-center justify-center">
                         <Header
-                            title="Hồ sơ cá nhân"
-                            subtitle="Quản lí hồ sơ cá nhân với Airbnb.com  "
+                            title="Profile"
+                            subtitle="Manage your profile with Airbnb.com"
                             big
                             center
                             white
@@ -102,8 +103,9 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                         />
                     
                     <div className="flex flex-col justify-center  gap-1 text-sm font-light">
-                        <div className="font-bold">{currentUser ? currentUser?.name : "Đăng nhập"}</div>
-                        <div>Hiển thị hồ sơ</div>
+                    <div className="font-bold">{currentUser ? currentUser?.name : "Log in"}</div>
+                        <div>Show Profile</div>
+                        
                         
                     </div>
                     </div>
@@ -117,9 +119,8 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                     onClick={handleNavigateRent}
                     className="rounded-md shadow-md flex items-center gap-4 my-4 border-[2px] px-4 py-2 cursor-pointer">
                     <div>
-                        <div className="text-sm font-bold">Cho thuê nhà trên Airbnb</div>
-                        <div className="text-sm font-light">Thiết lập và bắt đầu kiếm tiền thật đơn giản.</div>
-                        
+                    <div className="text-sm font-bold">Rent your house on Airbnb</div>
+<div className="text-sm font-light">Set up and start earning real money easily.</div>
                     </div>
                     <div>
                         <Image 
@@ -136,7 +137,7 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                     className="flex justify-between items-center gap-2 cursor-pointer">
                     <div className="flex  gap-1 items-center justify-center">
                         <div><RxAvatar size={30}/></div>
-                        <div className="text-sm font-light">Thông tin cá nhân</div>
+                        <div className="text-sm font-light">Personal information</div>
                     </div>
                     <div>
                         <BiSolidRightArrowAlt />
@@ -148,7 +149,7 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                 >
                     <div className="flex  gap-1 items-center justify-center">
                         <div><MdOutlineManageAccounts size={30}/></div>
-                        <div className="text-sm font-light">Tài khoản</div>
+                        <div className="text-sm font-light">Account</div>
                     </div>
                     <div>
                         <BiSolidRightArrowAlt />
@@ -157,11 +158,11 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                 <hr/>
                 {/* rents */}
                 <div className="flex flex-col gap-2 line-through text-neutral-600 cursor-not-allowed">
-                    <div>Cho thuê</div>
+                <div>Rent</div>
                         <div className="flex justify-between items-center gap-2">
                         <div className="flex  gap-1 items-center justify-center">
                             <div><BsToggles size={30}/></div>
-                            <div className="text-sm font-light">Quản lí phòng, nhà cho thuê của bạn.</div>
+                            <div className="text-sm font-light">Manage your rooms, houses for rent.</div>
                         </div>
                         <div>
                             <BiSolidRightArrowAlt />
@@ -176,7 +177,7 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                         className="flex justify-between items-center gap-2 cursor-pointer">
                         <div className="flex  gap-1 items-center justify-center">
                             <div><RxQuestionMarkCircled size={30}/></div>
-                            <div className="text-sm font-light">Truy cập trung tâm trợ giúp.</div>
+                            <div className="text-sm font-light">Visit the Help Center.</div>
                         </div>
                         <div>
                             <BiSolidRightArrowAlt />
@@ -185,7 +186,7 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                     <div className="flex justify-between items-center gap-2 cursor-pointer">
                         <div className="flex  gap-1 items-center justify-center">
                             <div><BsShieldFillExclamation size={30}/></div>
-                            <div className="text-sm font-light">Truy cập trung tâm trợ giúp.</div>
+                            <div className="text-sm font-light">Visit the Help Center.</div>
                         </div>
                         <div>
                             <BiSolidRightArrowAlt />
@@ -194,7 +195,7 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                     <div className="flex justify-between items-center gap-2 cursor-pointer">
                         <div className="flex  gap-1 items-center justify-center">
                             <div><LuHeadphones size={30}/></div>
-                            <div className="text-sm font-light">Báo cáo lo ngại của hàng xóm.</div>
+                            <div className="text-sm font-light">Report Neighbor Concerns.</div>
                         </div>
                         <div>
                             <BiSolidRightArrowAlt />
@@ -203,7 +204,7 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                     <div className="flex justify-between items-center gap-2 cursor-pointer">
                         <div className="flex  gap-1 items-center justify-center">
                             <div><FaAirbnb size={30}/></div>
-                            <div className="text-sm font-light">Phương thức hoạt động của Airbnb.</div>
+                            <div className="text-sm font-light">How Airbnb Works.</div>
                         </div>
                         <div>
                             <BiSolidRightArrowAlt />
@@ -215,7 +216,7 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                 <div>
                     <div className="flex items-center gap-2 text-sm"> 
                         <div><AiOutlineGlobal/></div>
-                        <div>Tiếng Việt (VN)</div>
+                        <div>Pakistan (EN)</div>
                     </div>
                    {currentUser ? (
                      <div 
@@ -234,7 +235,7 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                          ${currentUser ? " cursor-pointer " :"cursor-not-allowed"}
                      `}
                  >
-                     Đăng xuất
+                     Log out
                  </div>
                    ):(
                     <div 
@@ -253,20 +254,20 @@ const ClientProfile:React.FC<ClientProfileProps> = ({
                         ${currentUser ? " cursor-pointer " :"cursor-not-allowed"}
                     `}
                 >
-                    Đăng nhập
+                    Log in
                 </div>
                    )}
                     <div className="my-4">
                         <div className="flex justify-center text-[0.8rem]">
-                            <div>Trợ giúp & hỗ trợ</div>
-                            <div className="flex items-center"><BsDot/></div>
-                            <div>Điều khoản</div>
-                            <div className="flex items-center"><BsDot/></div>
-                            <div>Chính sách</div>
+                        <div>Help & Support</div>
+<div className="flex items-center"><BsDot/></div>
+<div>Terms</div>
+<div className="flex items-center"><BsDot/></div>
+<div>Policy</div>
                         </div>
                         <div className="flex items-center text-[0.6rem] justify-center ">
                         <div> <TbCircleLetterC/></div>
-                        <div> {new Date().getFullYear()} Airbnb, Inc, Bảo lưu mọi quyền.</div>
+                        <div> {new Date().getFullYear()} Airbnb, Inc. All rights reserved.</div>
                     </div>
                     </div>
                 </div>

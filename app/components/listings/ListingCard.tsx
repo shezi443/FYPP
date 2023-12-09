@@ -116,13 +116,13 @@ const ListingCard:React.FC<ListingCardProps> =({
            </div>
             <div className="flex items-center gap-2 text-[0.8rem] font-light text-neutral-500">
                 <div>
-                    {new Date(data?.createdAt).getDate()} thg
+                    {new Date(data?.createdAt).getDate()} -
                     {new Date(data?.createdAt).getMonth()+ 1} -
                     {new Date(data?.createdAt).getFullYear()} 
                 </div>
                 <div>-</div>
                 <div>
-                    {new Date(data?.night).getDate()} thg
+                    {new Date(data?.night).getDate()} -
                     {new Date(data?.night).getMonth()+ 1} -
                     {new Date(data?.night).getFullYear()} 
                 </div>
@@ -133,7 +133,7 @@ const ListingCard:React.FC<ListingCardProps> =({
             </div>
             <div className="flex flex-row items-center gap-1">
                 <div className="font-semibold text-sm">
-                    {price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}
+                    {price.toLocaleString('vi', {style : 'currency', currency : 'PKR'})}
                 </div>
                 {!reservation && (
                     <div className="font-light text-[0.8rem]"> / night</div>

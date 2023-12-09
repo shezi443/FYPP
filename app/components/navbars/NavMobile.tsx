@@ -88,7 +88,7 @@ const NavMobile:React.FC<NavMobileProps> = ({
         loginModal.onOpen()
         router.push('/')
       }else {
-        router.push('/contact?category=Khách')
+        router.push('/contact?category=Guest')
       }
 
     }
@@ -121,35 +121,35 @@ const NavMobile:React.FC<NavMobileProps> = ({
                 className={`flex flex-col justify-center items-center cursor-pointer ${path === '/' && "text-rose-500"}`}
                 >
                 <div><GoHome  size={30} className={`text-neutral-400 hover:text-neutral-500 transition-all ${path === '/' && "text-rose-500 hover:text-rose-600"}`}/></div>
-                <div>Trang chủ</div>
+                <div>Home</div>
               </div>
               <div 
                 onClick={handleNavigateTrips}
                 className={`flex flex-col justify-center items-center cursor-pointer ${path === '/trips' && "text-rose-500"}`}
                 >
                 <div><FaAirbnb  size={30} className={`text-neutral-400 hover:text-neutral-500 transition-all ${path === '/trips' && "text-rose-500 hover:text-rose-600"} `}/></div>
-                <div>Chuyến đi</div>
+                <div>Trips</div>
               </div>
               <div 
                 onClick={handleNavigateFavorite}
                 className={`flex flex-col justify-center items-center cursor-pointer ${path === '/favorites' && "text-rose-500"}`}
                 >
                 <div><AiOutlineHeart  size={30} className={`text-neutral-400 hover:text-neutral-500 transition-all ${path === '/favorites' && "text-rose-500 hover:text-rose-600"} `}/></div>
-                <div>Yêu thích</div>
+                <div>Favorites</div>
               </div>
               <div 
                 onClick={handleNavigateContact}
                 className={`flex flex-col justify-center items-center cursor-pointer ${path === '/contact' && "text-rose-500"}`}
                 >
                 <div><BiMessage  size={30}className={`text-neutral-400 hover:text-neutral-500 transition-all ${path === '/contact' && "text-rose-500 hover:text-rose-600"} `}/></div>
-                <div>Liên hệ</div>
+                <div>Contact</div>
               </div>
               <div 
                 onClick={handleNavigateInformation}
                 className={`flex flex-col justify-center items-center cursor-pointer ${path === '/profiles' && "text-rose-500"}`}
                 >
                 <div><RxAvatar  size={30} className={`text-neutral-400 hover:text-neutral-500 transition-all ${path === '/profiles' && "text-rose-500 hover:text-rose-600"} `}/></div>
-                <div>Hồ sơ</div>
+                <div>Profile</div>
               </div>
             </div>
           </Container>              

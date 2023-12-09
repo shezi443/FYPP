@@ -14,18 +14,18 @@ import { useRouter } from "next/navigation";
 
 const sortFavorite = [
     {
-        label:'cũ nhất',
+        label:'Oldest',
 
     },
     {
-        label:'mới nhất',
+        label:'Latest',
 
     },
     {
-        label:"đã hết hạn"
+        label: 'Expired',
     },
     {
-        label:"có sẵn"
+        label: 'Available',
     }
 ]
 interface FavoriteClientProps {
@@ -39,7 +39,7 @@ const FavoriteClient:React.FC<FavoriteClientProps> =({
     comment=[]
 }) =>{
     const router = useRouter()
-    const [sort,setSort] = useState('mới nhất');
+    const [sort,setSort] = useState('Latest');
     const [open,setOpen] = useState(false);
     const [favoriteArr,setFavoriteArr] = useState(favoriteListing);
     const [empty,setEmpty] = useState(false);
@@ -69,7 +69,7 @@ const FavoriteClient:React.FC<FavoriteClientProps> =({
     // handle sort
     useEffect(()=>{
         let arr;
-        if(sort === 'cũ nhất')
+        if(sort === 'Oldest')
         {
             arr = favoriteListing.sort((a,b)=>{
                 if(a.createdAt >b.createdAt) return 1;
@@ -83,7 +83,7 @@ const FavoriteClient:React.FC<FavoriteClientProps> =({
                 setEmpty(false);
 
             }
-        }else if(sort === 'mới nhất'){
+        }else if(sort === 'Latest'){
             arr = favoriteListing.sort((a,b)=>{
                 if(a.createdAt >b.createdAt) return -1;
                 if(a.createdAt <b.createdAt) return 1;
@@ -96,7 +96,7 @@ const FavoriteClient:React.FC<FavoriteClientProps> =({
                 setEmpty(false);
 
             }
-        }else if(sort ==='có sẵn'){
+        }else if(sort ==='Available'){
             arr = favoriteListing.filter((item) =>new Date(item.night) > new Date());
             if(arr.length === 0)
             {
@@ -125,20 +125,22 @@ const FavoriteClient:React.FC<FavoriteClientProps> =({
     {
        return  <ClientOnly>
                 <Container >
-                    <div className="font-bold text-2xl py-4">Yêu thích</div>
+                    <div className="font-bold text-2xl py-4">Favourite</div>
                     
                     <div className="py-4">
-                        <div className="text-md font-bold " >Tạo danh sách yêu thích đầu tiên</div>
-                        <div className="text-[0.8rem] font-light pb-4">Đă đến lúc phải bụi hành lý và bắt đầu chuẩn bị cho chuyến phiêu lưu tiếp theo cảu bạn rồi.</div>
+                    <div className="text-md font-bold">Create your first favorite list</div>
+<div className="text-[0.8rem] font-light pb-4">It's time to dust off your luggage and start preparing for your next adventure.</div>
+
                         <hr/>
                         <div
                             className=" py-4  "
                         >
-                            <button className="border-[1px] rounded-lg px-4 py-4 hover:bg-neutral-200 transition text-sm cursor-pointer" onClick={()=>router.push('/')}>Bắt đầu tìm kiếm</button>
+                            <button className="border-[1px] rounded-lg px-4 py-4 hover:bg-neutral-200 transition text-sm cursor-pointer" onClick={()=>router.push('/')}>Start search</button>
                         </div>
                     </div>
                     <hr/>
-                    <div className="text-[0.8rem] py-4 cursor-pointer">Bạn không tìm thấy đặt phòng/ đặt chổ của mình ở đây? <span onClick={()=>router.push('/contact?category=Khách')} className="underline cursor-pointer">Truy cập Trung tâm trợ giúp</span></div>
+                    <div className="text-[0.8rem] py-4 cursor-pointer">Can't find your reservation here?<span onClick={()=>router.push('/contact?category=Guest')} className="underline cursor-pointer">
+Visit the Help Center</span></div>
                 </Container>
 
             </ClientOnly>
@@ -149,8 +151,8 @@ const FavoriteClient:React.FC<FavoriteClientProps> =({
              <div className="w-full h-auto relative">
                     <div className="w-full h-[300px] absolute top-0 left-0 bg-neutral-950/60 flex items-center justify-center">
                         <Header
-                            title="Danh sách yêu thích"
-                            subtitle="Tổng hợp danh sách những địa điểm yêu thích của bạn"
+                           title="Favorite Lists"
+                           subtitle="Aggregate lists of your favorite places"                           
                             big
                             center
                             white

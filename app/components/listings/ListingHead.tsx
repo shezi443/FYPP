@@ -85,12 +85,12 @@ const ListingHead:React.FC<ListingHeadProps> =({
        
         <>
             <div className="w-full h-[100px]">
-                linh
+            Shezi
             </div>
              <div>
                 <div className="font-semibold text-4xl uppercase ">{title}</div>
                 <div className="flex gap-1 cursor-pointer">
-                    <div className="text-sm flex"><AiFillStar/>{handleCountAllStar()}<span className="flex items-center"><BsDot/></span><span className="underline font-bold">{commentById.length} đánh giá</span></div>
+                    <div className="text-sm flex"><AiFillStar/>{handleCountAllStar()}<span className="flex items-center"><BsDot/></span><span className="underline font-bold">{commentById.length} review</span></div>
                     <span className="flex items-center"><BsDot/></span>
                     <div className="text-sm underline">{location?.region} - {location?.label}</div>
                 </div>

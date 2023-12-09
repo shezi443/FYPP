@@ -11,32 +11,32 @@ import { BsDot } from 'react-icons/bs'
 
 const cata = [
     {
-        title:"Nơi bạn tới trong như thế nào ?",
-        content:"Tìm tất cả thông tin chi tiết về các loại lưu trú khác nhau bao gồm toàn bộ địa điểm, phòng riêng, phòng khách sạn và phòng chung."
+        title: "How do you arrive?",
+        content: "Find all the details about different types of accommodations, including entire homes, private rooms, hotels, and shared rooms."
     },
     {
-        title:"Nhắn tin cho chủ nhà ",
-        content:"Đọc thêm về thời điểm bạn cần nhắn tin cho Chủ nhà hoặc thời điểm đó có thể là một ý kiến ​​hay."
+        title: "Messaging the host",
+        content: "Learn more about when you should message the host or when it might be a good idea."
     },
     {
-        title:"Yêu cầu đến thăm trước khi đặt phòng",
-        content:"Làm thế nào để tìm thêm thông tin chi tiết về một địa điểm mà không cần phải truy cập."
+        title: "Request to book before reservation",
+        content: "How to find additional information about a place without making a reservation."
     },
     {
-        title:"Lời mời và ưu đãi đặc biệt",
-        content:"Chi tiết về cách hoạt động của phê duyệt trước và ưu đãi đặc biệt."
+        title: "Invitations and special deals",
+        content: "Details on how pre-approvals and special deals work."
     },
     {
-        title:"Tìm kiếm các địa điểm có tính năng trợ năng",
-        content:"Làm thế nào để tìm một nơi để ở đáp ứng nhu cầu di chuyển của bạn."
+        title: "Search for accessible places",
+        content: "How to find a place that meets your mobility needs."
     },
     {
-        title:"Sử dụng bộ lọc tìm kiếm",
-        content:"Thêm chi tiết về tất cả các bộ lọc có sẵn."
+        title: "Using search filters",
+        content: "More details about all the available search filters."
     },
     {
-        title:"Chính sách tiệc tùng và sự kiện",
-        content:"Chúng tôi đã tạo Chính sách về Tiệc và Sự kiện để cung cấp hướng dẫn rõ ràng về những gì chúng tôi mong đợi từ mọi người."
+        title: "Party and event policies",
+        content: "We've created Party and Event Policies to provide clear guidelines on what we expect from everyone."
     }
 ]
 
@@ -54,8 +54,8 @@ const ContactIdClient =() =>{
         <div className="w-full h-auto relative">
                     <div className="w-full h-[300px] absolute top-0 left-0 bg-neutral-950/60 flex items-center justify-center">
                         <Header
-                            title="Bài viết"
-                            subtitle="Bài viết Airbnb"
+                             title="Articles"
+                             subtitle="Airbnb Articles"   
                             big
                             center
                             white
@@ -71,8 +71,8 @@ const ContactIdClient =() =>{
                     />
             </div>
             <div className="flex text-sm font-light px-4 py-4 ">
-                <div className='cursor-pointer font-bold hover:text-neutral-500' onClick={()=>router.push('/contact')}>Trang chủ /</div>
-                <div>Tìm chỗ ở phù hợp với bạn</div>
+                <div className='cursor-pointer font-bold hover:text-neutral-500' onClick={()=>router.push('/contact')}>Home page/</div>
+                <div>Find accommodation that's right for you</div>
             </div>
          <Container>
             <div
@@ -87,7 +87,7 @@ const ContactIdClient =() =>{
                 <div className='col-span-2 px-4'>
                     <div className='font-bold text-2xl capitalize'>{contactId?.title}</div>
                     <div className='flex items-center text-sm '>
-                        <div>Hướng dẫn</div>
+                        <div>Instruct</div>
                         <BsDot />
                         <div>{contactId?.category}</div>
                     </div>
@@ -108,7 +108,7 @@ const ContactIdClient =() =>{
                         />
 
                     </div>
-                    <div className='font-light text-justify'>Muốn giúp tìm một nơi tuyệt vời để ở? Dưới đây là những lĩnh vực hàng đầu mà khách có thắc mắc khi tìm kiếm chuyến đi tiếp theo.</div>
+                    <div className='font-light text-justify'>Want to help find a great place to stay? Here are the top areas where guests often have questions when searching for their next trip.</div>
                     <div className ="font-light py-4 text-justify">{contactId?.content}</div>
                     <hr/>
                     <div>
@@ -128,7 +128,7 @@ const ContactIdClient =() =>{
                 </div>
                 <div className='px-4'>
                    <div>
-                        <div className='font-bold text-2xl '>Bài viết liên quan</div>
+                        <div className='font-bold text-2xl '>Related articles</div>
                         <div>
                             {caroselArr.map((item)=>{
                                 return (

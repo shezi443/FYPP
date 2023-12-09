@@ -56,8 +56,8 @@ const InformationAccount:React.FC<InformationAccountProps> =({
     return (
         <div>
             <Header
-                title="Tạo mới cá nhân"
-                subtitle={info ?"Bạn đã tạo thông tin cá nhân":""}
+                title="Create New Profile"
+                subtitle={info ? "You have created a personal profile" : ""}
                 center
                
             />
@@ -81,15 +81,15 @@ const InformationAccount:React.FC<InformationAccountProps> =({
                         "
                         >
                         {/* register your input into the hook by invoking the "register" function */}
-                        <label htmlFor="name" className="text-sm font-light ">Tên pháp lí</label>
+                        <label htmlFor="name" className="text-sm font-light ">Legal Name</label>
                         <input 
                             id="name" 
                             {...register("name",{required: true})} 
-                            placeholder="Tên" 
+                            placeholder="Name" 
                             className="text-[0.8rem] border-[1px] rounded-md border-neutral-600 px-4 py-2"
                         />
 
-                        <label htmlFor="email" className="text-sm font-light ">Địa chỉ Email</label>
+                        <label htmlFor="email" className="text-sm font-light ">Email Address</label>
                         <input 
                             defaultValue="linh thai" 
                             id="email" {...register("email")}  
@@ -97,33 +97,33 @@ const InformationAccount:React.FC<InformationAccountProps> =({
                              className="text-[0.8rem] border-[1px] rounded-md border-neutral-600 px-4 py-2"
                         />
 
-                        <label htmlFor="phone" className="text-sm font-light ">Số điện thoại</label>
+                        <label htmlFor="phone" className="text-sm font-light ">Phone number.</label>
                         <input  
                             id="phone" 
                             {...register("phone")}  
-                            placeholder="Số điện thoại"
+                            placeholder="Phone number."
                              className="text-[0.8rem] border-[1px] rounded-md border-neutral-600 px-4 py-2"
                         />
 
-                        <label htmlFor="address" className="text-sm font-light ">Địa chỉ</label>
+                        <label htmlFor="address" className="text-sm font-light ">Address</label>
                         <input  
                             id="address" 
                             {...register("address")}  
-                            placeholder="Địa chỉ"
+                            placeholder="Address"
                              className="text-[0.8rem] border-[1px] rounded-md border-neutral-600 px-4 py-2"
                         />
 
-                        <label htmlFor="emerency" className="text-sm font-light ">Liên hệ trường hợp khẩn cấp</label>
+                        <label htmlFor="emerency" className="text-sm font-light ">Emergency Contact</label>
                         <input  
                             id="emerency" 
                             {...register("emerency")}  
-                            placeholder="Liên hệ trường hợp khẩn cấp"
+                            placeholder="Emergency Contact"
                              className="text-[0.8rem] border-[1px] rounded-md border-neutral-600 px-4 py-2"
                         />
 
                         <input 
                             type={!info ?'submit':"button"}
-                            value="Tạo thông tin trên Airbnb" 
+                            value="Create information on Airbnb" 
                             className={`
                                 px-4 py-2 bg-rose-600 text-white rounded-md hover:bg-rose-500 capitalize text-sm
                                 ${info ?"cursor-not-allowed":"cursor-pointer"}
@@ -146,8 +146,9 @@ const InformationAccount:React.FC<InformationAccountProps> =({
                             <FcLock size={40}/>
                         </div>
                         <div>
-                            <div className="font-bold text-sm ">không hiển thị thông tin ở đây</div>
-                            <div className="text-[0.8rem] text-neutral-600 font-light">Chỉ có bạn mới được thấy thông tin bảo mật này</div>
+                        <div className="font-bold text-sm">Do not display information here</div>
+<div className="text-[0.8rem] text-neutral-600 font-light">Only you can see this security information</div>
+
                         </div>
                     </div>
                     <div className="flex flex-col gap-4 border-b-[1px] py-4 ">
@@ -155,18 +156,18 @@ const InformationAccount:React.FC<InformationAccountProps> =({
                             <AiFillTool size={40} className="text-neutral-400"/>
                         </div>
                         <div>
-                            <div className="font-bold text-sm ">Bạn có thể cập nhật thông tin</div>
+                            <div className="font-bold text-sm ">You can update information</div>
                             <div className="text-[0.8rem] text-neutral-600 font-light">
-                                Cập nhật lại thông tin miễn phí 
+                            Update your information for free
                                 <span 
-                                    onClick={()=>router.push('informations?category=cập%20nhật')}
+                                    onClick={()=>router.push('informations?category=update')}
                                     className="underline hover:opacity-[0.5] cursor-pointer px-2"
                                 >
-                                    tại đây
-                                </span> trên Airbnb.
+                                    Update now
+                                </span>here on Airbnb.
                             </div>
                             <div className="text-[0.8rem] text-neutral-600 font-light">
-                                Bạn có thể chỉnh sửa thông tin liên hệ và thông tin cá nhân. Nếu sử dụng thông tin này để xác minh danh tính, bạn sẽ cần phải xác minh lần nữa vào lần đặt tiếp theo, hoặc để tiếp tục đón tiếp khách.
+                            You can edit contact and personal information. If you use this information for identity verification, you will need to verify again for the next reservation, or to continue hosting guests.
                             </div>
                         </div>
                     </div>
@@ -175,10 +176,10 @@ const InformationAccount:React.FC<InformationAccountProps> =({
                             <GiShare size={40} className="text-rose-400"/>
                         </div>
                         <div>
-                            <div className="font-bold text-sm">Bạn có thể chia sẻ </div>
+                            <div className="font-bold text-sm">You can share </div>
                            
                             <div className="text-[0.8rem] text-neutral-600 font-light">
-                            Airbnb chỉ tiết lộ thông tin liên lạc cho Chủ nhà/Người tổ chức và khách sau khi đặt phòng/đặt chỗ được xác nhận.
+                            Airbnb only discloses contact information to hosts/organizers and guests after the booking/reservation is confirmed.
                             </div>
                         </div>
                     </div>

@@ -50,7 +50,7 @@ const NavbarListingId = ({
       `}
         >
       <Button 
-        label="Đặt Phòng"
+        label="Reservation"
         onClick={handleOpenBook}
       />
       

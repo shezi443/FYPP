@@ -16,15 +16,15 @@ import Footer from "../components/Footer"
 
 const menu = [
     {
-        label:"thông tin cá nhân"
-    },
-    {
-        label: "tạo mới"
-    },
-    {
-        label: "cập nhật"
-    }
-]
+        label: "personal information"
+      },
+      {
+        label: "create new"
+      },
+      {
+        label: "update"
+      }
+    ]
 
 interface ClientInformationProps {
     currentUser:SafeUser | null;
@@ -44,7 +44,7 @@ const ClientInformation:React.FC<ClientInformationProps> =({
             body content
         </div>
     )
-    if(category === 'thông tin cá nhân'){
+    if(category === 'personal information'){
         bodyContent = (
             <InformationPerson 
                 information ={information}
@@ -52,14 +52,14 @@ const ClientInformation:React.FC<ClientInformationProps> =({
         )
     }
 
-    if(category === 'tạo mới'){
+    if(category === 'create new'){
         bodyContent = (
             <InformationAccount 
                 information = {information}
             />
         )
     }
-    if(category === 'cập nhật'){
+    if(category === 'update'){
         bodyContent = (
             <InformationUpdate
                 information = {information}
@@ -71,8 +71,9 @@ const ClientInformation:React.FC<ClientInformationProps> =({
             <div className="w-full h-auto relative">
                 <div className="w-full h-[300px] absolute top-0 left-0 bg-neutral-950/60 flex items-center justify-center">
                     <Header
-                        title="Thông tin tài khoản"
-                        subtitle="Tổng hợp toàn bộ thông tin về tài khoản và cho thuê."
+                       title="Account Information"
+                       subtitle="Aggregate all information about your account and rentals."
+                       
                         big
                         center
                         white

@@ -17,7 +17,7 @@ const NavbarContact = ()=>{
                     height={70}
                     className="cursor-pointer"
                 />
-                <div className="font-bold text-sm text-end cursor-pointer w-full" onClick={()=>router.push('/contact')}>Trung tâm trợ giúp</div>
+                <div className="font-bold text-sm text-end cursor-pointer w-full" onClick={()=>router.push('/contact')}>Help Center</div>
             </div>
         </Container>
     )

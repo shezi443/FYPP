@@ -17,19 +17,19 @@ import queryString from "query-string"
 const room =[1,2,3,4,5,6,7,8]
 const type = [
     {
-        label:"Sử dụng toàn bộ căn hộ",
-        sub:"Căn hộ",
-        icon:BsHouseDoor
+        label: "Entire apartment usage",
+        sub: "Apartment",
+        icon: BsHouseDoor
     },
     {
-        label:"Ngủ trong phòng hoặc khu vực chung",
-        sub:"Khu vực chung",
-        icon:GiCampingTent
+        label: "Sleep in a room or common area",
+        sub: "Common area",
+        icon: GiCampingTent
     },
     {
-        label:"Phòng riêng và có khu vực chung",
-        sub:"Phòng riêng",
-        icon:MdOutlineMeetingRoom
+        label: "Private room with shared area",
+        sub: "Private room",
+        icon: MdOutlineMeetingRoom
     }
 ]
 const FilterModal = () =>{
@@ -110,8 +110,8 @@ const FilterModal = () =>{
     const bodyContent = (
         <div className="grid grid-cols-1 px-4 py-4 max-h-[70vh] overflow-y-auto gap-5">
             <Header
-                title="Loại nơi ở"
-                subtitle="Tìm phòng, nhà nguyên căn hoặc bất kì loại chổ ở nào."
+               title="Accommodation Type"
+               subtitle="Find a room, entire home, or any type of accommodation."
             />
             <div className="flex flex-col w-full gap-2 md:flex-row justify-between items-center">
                 {type.map((item)=>{
@@ -130,7 +130,7 @@ const FilterModal = () =>{
             <div>
                 <div>
                     <Header 
-                        title="Số lượng khách"
+                        title="Number of Guests"
                         subtitle=""
                     />
                     <div className="flex flex-wrap items-center gap-1 my-2">
@@ -149,7 +149,7 @@ const FilterModal = () =>{
                 </div>
                 <div>
                     <Header 
-                        title="Số lượng pet"
+                         title="Number of Pets"
                         subtitle=""
                     />
                     <div className="flex flex-wrap items-center gap-1 my-2">
@@ -168,7 +168,7 @@ const FilterModal = () =>{
                 </div>
                 <div>
                     <Header 
-                        title="Phòng ngủ"
+                      title="Bedrooms"
                         subtitle=""
                     />
                     <div className="flex flex-wrap items-center gap-1 my-2">
@@ -187,7 +187,7 @@ const FilterModal = () =>{
                 </div>
                 <div>
                     <Header 
-                        title="Giường ngủ"
+                       title="Beds"
                         subtitle=""
                     />
                     <div className="flex flex-wrap items-center gap-1 my-2">
@@ -206,7 +206,7 @@ const FilterModal = () =>{
                 </div>
                 <div>
                     <Header 
-                        title="Phòng tắm"
+                        title="Bathrooms"
                         subtitle=""
                     />
                     <div className="flex flex-wrap items-center gap-1 my-2">
@@ -227,8 +227,8 @@ const FilterModal = () =>{
             {/* giá */}
             <div>
                 <Header 
-                    title="Giá theo đêm"
-                    subtitle="Chưa bao gồm thuế và phí"
+                     title="Price per night"
+                     subtitle="Excluding taxes and fees"
                 />
                 <div>
                 <Slider
@@ -239,17 +239,17 @@ const FilterModal = () =>{
                     valueLabelDisplay="auto"
                     step={500000}
                     marks
-                    min={100000}
+                    min={10}
                     max={10000000}
                     />
-                    <div>Từ {priceValue.toLocaleString('vi', {style : 'currency', currency : 'VND'})} </div>
+                    <div>From{priceValue.toLocaleString('en', {style : 'currency', currency : 'PKR'})} </div>
                 </div>
             </div>
             {/* place */}
             <div>
                 <Header 
-                    title="Nơi bạn muốn đến"
-                    subtitle="Có rất nhiều sự lựa chọn với Airbnb.com"
+                    title="Destination"
+                    subtitle="There are plenty of choices on Airbnb.com"
                 />
                 <div className="grid text-center grid-cols-3 gap-2">
                     {categories.map((category)=>{
@@ -266,13 +266,14 @@ const FilterModal = () =>{
             {/* recive room */}
             <div className="flex flex-col gap-2 ">
                 <Header 
-                    title="Tuy chọn đặt phòng"
+                    title="Booking options"
                     subtitle=""
                 />
-                <div className="flex items-center justify-between gap-2">
+               <div className="flex items-center justify-between gap-2">
                     <div>
-                        <div className="font-bold text-sm">Đặt phòng</div>
-                        <div className="text-[0.8rem] font-light">Nhà phòng cho thuê bạn có thể đặt mà không chờ chủ nhà chấp thuận.</div>
+                    <div className="font-bold text-sm">Book now</div>
+<div className="text-[0.8rem] font-light">Private rooms for rent that you can book without waiting for host approval.</div>
+
                     </div>
                     <div onClick={()=>setToggle2(!toggle2)} className="cursor-pointer">
                         {toggle2 ? <div><BsToggle2Off size={25}/></div>:<div><BsToggle2On size={25}/></div>}
@@ -280,8 +281,9 @@ const FilterModal = () =>{
                 </div>
                 <div className="flex items-center justify-between gap-2">
                     <div>
-                        <div className="font-bold text-sm">Tự nhận phòng</div>
-                        <div className="text-[0.8rem] font-light">Dễ dàng vào chổ ở ngay khi bạn đến.</div>
+                    <div className="font-bold text-sm">Self-check-in</div>
+<div className="text-[0.8rem] font-light">Easily access your accommodation as soon as you arrive.</div>
+
                     </div>
                     <div onClick={()=>setToggle1(!toggle1)} className="cursor-pointer">
                         {toggle1 ? <div><BsToggle2Off size={25}/></div>:<div><BsToggle2On size={25}/></div>}
@@ -291,13 +293,14 @@ const FilterModal = () =>{
             {/* Better place */}
             <div className="flex flex-col gap-2 ">
                 <Header 
-                    title="Chổ ở hàng đầu"
+                    title="Top accommodations"
                     subtitle=""
                 />
                 <div className="flex items-center justify-between gap-2">
                     <div>
-                        <div className="font-bold text-sm">Chủ nhà siêu cấp</div>
-                        <div className="text-[0.8rem] font-light">Ở cùng với chủ nhà được công nhận.</div>
+                    <div className="font-bold text-sm">Superhost</div>
+<div className="text-[0.8rem] font-light">Stay with recognized hosts.</div>
+
                     </div>
                     <div onClick={()=>setToggle3(!toggle3)} className="cursor-pointer">
                         {toggle3 ? <div><BsToggle2Off size={25}/></div>:<div><BsToggle2On size={25}/></div>}
@@ -306,7 +309,8 @@ const FilterModal = () =>{
                 <div className="flex items-center justify-between gap-2">
                     <div>
                         <div className="font-bold text-sm">Airbnb plus</div>
-                        <div className="text-[0.8rem] font-light">Mỗi nhà plus đều được xét duyệt về mặt chất lượng.</div>
+                        <div className="text-[0.8rem] font-light">Every plus home is quality checked.</div>
+
                     </div>
                     <div onClick={()=>setToggle4(!toggle4)} className="cursor-pointer">
                         {toggle4 ? <div><BsToggle2Off size={25}/></div>:<div><BsToggle2On size={25}/></div>}
@@ -321,9 +325,9 @@ const FilterModal = () =>{
             onClose={()=>filterModal.onClose()}
             onSubmit={onSubmit}
             title="filter Product"
-            actionLabel="Lộc "
+            actionLabel="Filter "
             body={bodyContent}
-            secondaryActionLabel="Xóa thông tin"
+            secondaryActionLabel="Clear Information"
             secondaryAction={handleReset}
         />
     )

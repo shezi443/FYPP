@@ -24,7 +24,7 @@ interface TripsClientProps {
     reservations: safeReservation[]
 }
 const select =[
-    "mới nhất", "cũ nhất", "giá"
+    "newest", "oldest", "price"
 ]
 const TripsClient:React.FC<TripsClientProps> = ({
     currentUser,
@@ -32,7 +32,7 @@ const TripsClient:React.FC<TripsClientProps> = ({
 }) =>{
     const router = useRouter()
     const searchModel = useSearchModal();
-    const [selectValue,setSelectValue] = useState('mới nhất');
+    const [selectValue,setSelectValue] = useState('newest');
     const [rootReservation,setRootReservation] = useState(reservations)
     const [uppdateRe,setUppdateRe] = useState(reservations)
     const [toggle,setToggle] = useState(false);
@@ -61,14 +61,14 @@ const TripsClient:React.FC<TripsClientProps> = ({
     // reservation
     const updateReservatrion = useMemo(()=>{
         let arr;
-        if(selectValue === 'cũ nhất')
+        if(selectValue === 'oldest')
         {
             arr = reservations.sort((a,b)=>{
                 if(a.createdAt >b.createdAt) return 1;
                 if(a.createdAt <b.createdAt) return -1;
                 return 0;
             })
-        }else if(selectValue === 'mới nhất'){
+        }else if(selectValue === 'newest'){
             arr = reservations.sort((a,b)=>{
                 if(a.createdAt >b.createdAt) return -1;
                 if(a.createdAt <b.createdAt) return 1;
@@ -134,22 +134,22 @@ const TripsClient:React.FC<TripsClientProps> = ({
         return (
             <ClientOnly>
                 <Container >
-                    <div className="font-bold text-2xl py-4">Chuyến đi</div>
+                    <div className="font-bold text-2xl py-4">Journey</div>
                     
                     <div className="py-4">
-                        <div className="text-md font-bold ">Chưa có chuyến đi nào được đặt ... vẫn chưa!</div>
-                        <div className="text-[0.8rem] font-light pb-4">Đă đến lúc phải bụi hành lý và bắt đầu chuẩn bị cho chuyến phiêu lưu tiếp theo của bạn rồi.</div>
+                        <div className="text-md font-bold ">No trips booked yet...</div>
+                        <div className="text-[0.8rem] font-light pb-4">It's time to dust off your luggage and get ready for your next adventure.</div>
                         <hr/>
                         <div
                             className=" py-4  "
                         >
                             <button 
                             onClick={handleSearchForTrips}
-                            className="border-[1px] rounded-lg px-4 py-4 hover:bg-neutral-200 transition text-sm" >Bắt đầu tìm kiếm</button>
+                            className="border-[1px] rounded-lg px-4 py-4 hover:bg-neutral-200 transition text-sm" >Start Searching</button>
                         </div>
                     </div>
                     <hr/>
-                    <div className="text-[0.8rem] py-4">Bạn không tìm thấy đặt phòng/ đặt chổ của mình ở đây? <span onClick={()=>router.push('/contact?category=Khách')} className="underline cursor-pointer">Truy cập Trung tâm trợ giúp</span></div>
+                    <div className="text-[0.8rem] py-4">Can't find your booking here?  <span onClick={()=>router.push('/contact?category=Guest')} className="underline cursor-pointer">Visit the Help Center</span></div>
                 </Container>
 
             </ClientOnly>
@@ -161,8 +161,8 @@ const TripsClient:React.FC<TripsClientProps> = ({
         <div className="w-full h-auto relative">
             <div className="w-full h-[300px] absolute top-0 left-0 bg-neutral-950/60 flex items-center justify-center">
                 <Header 
-                    title="Chuyến đi của bạn"
-                    subtitle="Tổng hợp danh sách những chuyến đi của bạn"
+                    title="Your Journeys"
+                    subtitle="Aggregate list of your journeys"
                     big
                     center
                     white

@@ -145,10 +145,10 @@ const CommentSession:React.FC<CommentProps> =({
             </div>
             <div className="font-semibold flex items-center">{handleCountAllStar()}</div>
             
-            <div className="text-sm underline flex"><BsDot/>{commentById.length} đánh giá</div>
+            <div className="text-sm underline flex"><BsDot/>{commentById.length} review</div>
         </div>
         {/* start and review information */}
-        <div className="font-light text-sm">Bạn đánh giá chúng tôi bao nhiêu sao ?</div>
+        <div className="font-light text-sm">How many stars do you rate us</div>
         <div className="flex cursor-pointer ">
            {starts && starts.map((start)=>{
                  return <div key={start} className="start" id={start} onClick={()=>handleFillStar(start)}>
@@ -160,7 +160,7 @@ const CommentSession:React.FC<CommentProps> =({
         <div>
            {/* command box */}
            <Header
-            title="Bạn nghĩ gì về chúng tôi"
+            title="What do you think about us"
             subtitle=""
            />
            <textarea 
@@ -177,7 +177,7 @@ const CommentSession:React.FC<CommentProps> =({
                 font-light
                  ${modal ? "h-[100px]":"h-[300px]"}
                 `}
-                placeholder="Để lại một vài cảm nghĩ về khách sạn của chúng tôi..."
+                placeholder="Leave a few thoughts about our building..."
                 >
            
             </textarea>
