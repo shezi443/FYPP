@@ -56,7 +56,7 @@ const ListingRule:React.FC<ListingProps> = ({
                 <div className="text-sm font-light flex flex-col gap-2 mt-2 mb-2">
                 <div className="font-bold">Cancellation policy</div>
 <div>Free cancellation within 48 hours</div>
-<div>Please read the host/organizer's full cancellation policy, which applies even if you cancel due to illness or disruptions caused by COVID-19.</div>
+<div>Please read the host/organizers full cancellation policy, which applies even if you cancel due to illness or disruptions caused by COVID-19.</div>
 
                 </div>
             </div>

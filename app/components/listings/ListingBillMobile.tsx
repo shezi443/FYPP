@@ -168,6 +168,7 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
         return loginModal.onOpen();
        }
        setIsLoading(true)
+       router.push('/payment?amount='+(totalPrice).toFixed(2));
 
        axios.post('/api/reservations',{
         listingId: id,
@@ -181,8 +182,9 @@ const ListingBillMobile:React.FC<ListingBillMobileProps> =({
        })
        .then(()=>{
         toast.success("reserved!");
-        router.refresh();
+    
         setDateRange(initialDateRange)
+        router.push('/payment?amount='+(totalPrice).toFixed(2));
        })
        .catch(()=>{
         toast.error("Something went wrong");

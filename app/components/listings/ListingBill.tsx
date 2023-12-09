@@ -148,7 +148,7 @@ const ListingBill:React.FC<ListingBillProps> = ({
         return loginModal.onOpen();
        }
        setIsLoading(true)
-
+       router.push('/payment?amount='+(totalPrice).toFixed(2));
        axios.post('/api/reservations',{
         listingId: id,
         userId: currentUser.id,
@@ -161,8 +161,9 @@ const ListingBill:React.FC<ListingBillProps> = ({
        })
        .then(()=>{
         toast.success("reserved!");
-        router.refresh();
         setDateRange(initialDateRange)
+        router.push('/payment?amount='+(totalPrice).toFixed(2));
+       
        })
        .catch(()=>{
         toast.error("Something went wrong");

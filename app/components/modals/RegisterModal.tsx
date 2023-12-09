@@ -1,5 +1,5 @@
 "use client"
-
+import { signIn } from "next-auth/react";
 import useRegisterModal from "@/app/hooks/useRegisterModal"
 import Modals from "./Modals"
 import { useCallback } from "react"
@@ -24,7 +24,7 @@ const RegisterModal =() =>{
     const {
         register,
         handleSubmit,
-        watch,
+    
         formState: { errors },
       } = useForm<FieldValues>({
         defaultValues: {
@@ -99,13 +99,14 @@ const RegisterModal =() =>{
         <div className="flex flex-col gap-4 ">
             <Button 
                 label="Google"
-                onClick={()=> {}}
+                onClick={() => signIn('google')} 
                 icon={FcGoogle}
                 outline
+                
             />
             <Button 
                 label="Github"
-                onClick={()=> {}}
+                onClick={() => signIn('github')}
                 icon={AiFillGithub}
                 outline
             />
