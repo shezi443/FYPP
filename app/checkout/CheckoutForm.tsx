@@ -26,7 +26,7 @@ const {error} =await stripe.confirmPayment(
     clientSecret:secretKey,
     elements,
     confirmParams:{
-        return_url: "https://qw-olive.vercel.app/trips"
+        return_url: "https://fyyp-q8ydz782v-shezi443.vercel.app/trips"
     },
 }
 
