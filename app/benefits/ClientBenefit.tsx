@@ -98,8 +98,8 @@ const ClientBenefit:React.FC<ClientBenefitProps> = ({
            <div className="w-full h-auto relative">
                 <div className="w-full h-[300px] absolute top-0 left-0 bg-neutral-950/60 flex items-center justify-center">
                     <Header
-                        title="Quản lí doanh số"
-                        subtitle="Doanh số được thống kê theo tháng"
+                       title="Revenue Management"
+                       subtitle="Revenue statistics are summarized by month"
                         big
                         center
                         white
@@ -116,8 +116,8 @@ const ClientBenefit:React.FC<ClientBenefitProps> = ({
             </div>
             <div className="block lg:hidden  ">
                 <Header 
-                    title="Chuyển sang desktop để quản lí danh số"
-                    subtitle="Chỉ có thể hiển thị mục trên màn hình desktop"
+                      title="Switch to Desktop for Revenue Management"
+                      subtitle="This feature is only available on desktop screens"
                     center
                 />
             </div>
@@ -126,10 +126,10 @@ const ClientBenefit:React.FC<ClientBenefitProps> = ({
                 <table className="w-full  text-center ">
                     <tbody>
                     <tr>
-                       <th className="text-start"> Doanh thu theo tháng</th>
-                       <th>Số lượng đặt phòng</th>
-                       <th>Tổng doanh thu</th>
-                       <th>Trạng thái</th>
+                    <th className="text-start">Monthly Revenue</th>
+                <th>Number of Bookings</th>
+                <th>Total Revenue</th>
+                <th>Status</th>
                     </tr>
                   {takeMounth.map((item)=>{
                     return <tr key={item.month}>
@@ -137,11 +137,11 @@ const ClientBenefit:React.FC<ClientBenefitProps> = ({
                         onClick={()=>router.push(`/benefits/${item.month}`)} 
                         className="text-start cursor-pointer hover:text-neutral-600"
                         > 
-                            tháng {item.month}
+                            Month {item.month}
                         </td>
                         <td> {item.count} lượt  </td>
-                        <td> {item.totalPrice.toLocaleString('vi', {style : 'currency', currency : 'VND'})} </td>
-                        <td >{item.status ? 'hoàn thành': 'cập nhật'}</td>
+                        <td> {item.totalPrice.toLocaleString('vi', {style : 'currency', currency : 'PKR'})} </td>
+                        <td >{item.status ? 'completed': 'update'}</td>
                     </tr>
                   })}
                   </tbody>
@@ -150,11 +150,11 @@ const ClientBenefit:React.FC<ClientBenefitProps> = ({
             </div>
             <hr/>
             <div className="flex flex-col gap-2 items-end mt-4 px-4">
-                <div>Tổng doanh thu trước thuế</div>
-                <div>{allBenefit.toLocaleString('vi', {style : 'currency', currency : 'VND'})}</div>
+                <div>Total revenue before tax</div>
+                <div>{allBenefit.toLocaleString('vi', {style : 'currency', currency : 'PKR'})}</div>
             </div>
             <div className="py-4 px-4 ">
-                <div onClick={()=>router.push('/rent2')} className="underline text-sm font-light cursor-pointer">Trở lại</div>
+                <div onClick={()=>router.push('/rent2')} className="underline text-sm font-light cursor-pointer">Back</div>
             </div>
             </div>
             <Footer />
