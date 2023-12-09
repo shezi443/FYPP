@@ -35,8 +35,8 @@ const ClientBenefitId:React.FC<ClientBenefitIdProps> = ({
             <div className="w-full h-auto relative">
                 <div className="w-full h-[300px] absolute top-0 left-0 bg-neutral-950/60 flex items-center justify-center">
                     <Header
-                        title={`Danh số tháng ${id}`}
-                        subtitle={`Doanh số được thống kê theo tháng ${id}`}
+                        title={`Monthly Revenue Report  ${id}`}
+                        subtitle={`Revenue statistics for the month of ${id}`}
                         big
                         center
                         white
@@ -54,13 +54,13 @@ const ClientBenefitId:React.FC<ClientBenefitIdProps> = ({
             <div className="px-4 py-4">
                 <table className="w-full text-center ">
                     <tr>
-                        <th>
-                            Tên dịch vụ
-                        </th>
-                        <th>Mã khách hàng</th>
-                        <th>Ngày nhận phòng</th>
-                        <th>Ngày trả phòng</th>
-                        <th>Tổng hóa đơn</th>
+                    <th>
+        Service Name
+    </th>
+    <th>Customer ID</th>
+    <th>Check-in Date</th>
+    <th>Check-out Date</th>
+    <th>Total Bill</th>
                     </tr>
                     
                         {benefit?.map((item)=>{
@@ -76,7 +76,7 @@ const ClientBenefitId:React.FC<ClientBenefitIdProps> = ({
                 </table>
             </div>
             <div className="py-4 px-4 ">
-                <div onClick={()=>router.push('/benefits')} className="underline text-sm font-light cursor-pointer">Trở lại</div>
+                <div onClick={()=>router.push('/benefits')} className="underline text-sm font-light cursor-pointer">Back</div>
             </div>
             <Footer />
         </div>
