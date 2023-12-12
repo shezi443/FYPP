@@ -116,7 +116,7 @@ const TripsCard:React.FC<TripsCardProps> = ({
                 <Button 
                             label="Cancel Reservation"
                            
-                    onClick={()=>onCancel(reservation?.id as string)}
+                    onClick={()=>onCancel(reservation?.id as any)}
                     disabled={deletingId === reservation?.id}
                         />
                         </div>
