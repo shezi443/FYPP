@@ -8,8 +8,8 @@ import { MdPlace } from "react-icons/md"
 import Button from "../Button"
 import { useCallback,useState } from "react"
 import { useRouter } from "next/navigation"
-
-
+import { toast } from "react-hot-toast";
+import axios from 'axios';
 interface TripsCardProps {
     currentUser: SafeUser | null
     data: SafeListing
@@ -38,6 +38,22 @@ const TripsCard:React.FC<TripsCardProps> = ({
 }) =>{
   
     const router = useRouter()
+    const [deletingId, setDeletingId] = useState('');
+    const onCancel = useCallback((id: string) => {
+        setDeletingId(id);
+    
+        axios.delete(`/api/reservations/${id}`)
+        .then(() => {
+          toast.success('Reservation cancelled');
+          router.refresh();
+        })
+        .catch((error) => {
+          toast.error(error?.response?.data?.error)
+        })
+        .finally(() => {
+          setDeletingId('');
+        })
+      }, [router]);
     const {getByValue} = useCountries()
     const location = getByValue(data.locationValue)
 
@@ -95,13 +111,22 @@ const TripsCard:React.FC<TripsCardProps> = ({
                     {new Date(data?.createdAt).getMonth() === new Date(data?.night).getMonth() ?<div>{mouth[new Date(data?.night).getMonth()]}</div>: <div>{mouth[new Date(data?.createdAt).getMonth()]} - {mouth[new Date(data?.night).getMonth()]}</div>}
                     </div>
                </div>
-                <div className="mt-4">
+                <div className="flex justify-between mt-2 py-2">
+                <div className="mr-4">
+                <Button 
+                            label="Cancel Reservation"
+                           
+                    onClick={()=>onCancel(reservation?.id as string)}
+                    disabled={deletingId === reservation?.id}
+                        />
+                        </div>
+                        <div>
                     <Button 
                         label="
                         Details"
                         onClick={()=>router.push(`/trips/${data?.id}`)}
                     />
-                
+                </div>
                 </div>
             </div>
             
