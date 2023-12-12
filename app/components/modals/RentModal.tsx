@@ -854,7 +854,7 @@ content="Choose whether you want to start with experienced hosting, set a starti
                    <div>
                     <div className="flex text-sm ">
                     <div className="font-bold">Start Date:</div>
-                        <div  className="font-light">{new Date().getDate()} thg</div>
+                        <div  className="font-light">{new Date().getDate()}-</div>
                         <div className="font-light">{new Date().getMonth()+1}-</div>
                         <div className="font-light">{new Date().getFullYear()}</div>
                     </div>
