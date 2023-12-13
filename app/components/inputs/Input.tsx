@@ -1,7 +1,7 @@
 "use client"
 
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
-import { TbCurrencyDong } from "react-icons/tb";
+import { FaRupeeSign } from "react-icons/fa6";
 
 
 interface InputProps{
@@ -37,7 +37,7 @@ const Input:React.FC<InputProps> =({
 
             {
                 formatPrice && (
-                    <TbCurrencyDong 
+                    <FaRupeeSign
                         className="
                             absolute
                             text-neutral-700
